@@ -1,0 +1,21 @@
+{
+    "project_name":       "bootloader",
+    "project_path":       "/home/user/csse4011/zephyrproject/modules/hal/espressif/components/bootloader/subproject",
+    "build_dir":          "/home/user/csse4011/Vidar-Blue/esp/build/esp-idf/build/bootloader",
+    "config_file":        "/home/user/csse4011/Vidar-Blue/esp/build/esp-idf/build/sdkconfig",
+    "config_defaults":    "",
+    "app_elf":            "bootloader.elf",
+    "app_bin":            "bootloader.bin",
+    "git_revision":       "73e7af1e2-dirty",
+    "target":             "esp32c3",
+    "rev":                "",
+    "phy_data_partition": "",
+    "monitor_baud" :      "115200",
+    "monitor_toolprefix": "riscv32-esp-elf-",
+    "config_environment" : {
+        "COMPONENT_KCONFIGS" : "/home/user/csse4011/zephyrproject/modules/hal/espressif/components/efuse/Kconfig;/home/user/csse4011/zephyrproject/modules/hal/espressif/components/esp32c3/Kconfig;/home/user/csse4011/zephyrproject/modules/hal/espressif/components/esp_common/Kconfig;/home/user/csse4011/zephyrproject/modules/hal/espressif/components/esp_hw_support/Kconfig;/home/user/csse4011/zephyrproject/modules/hal/espressif/components/esp_system/Kconfig;/home/user/csse4011/zephyrproject/modules/hal/espressif/components/freertos/Kconfig;/home/user/csse4011/zephyrproject/modules/hal/espressif/components/hal/Kconfig;/home/user/csse4011/zephyrproject/modules/hal/espressif/components/log/Kconfig;/home/user/csse4011/zephyrproject/modules/hal/espressif/components/newlib/Kconfig;/home/user/csse4011/zephyrproject/modules/hal/espressif/components/spi_flash/Kconfig",
+        "COMPONENT_KCONFIGS_PROJBUILD" : "/home/user/csse4011/zephyrproject/modules/hal/espressif/components/bootloader/Kconfig.projbuild;/home/user/csse4011/zephyrproject/modules/hal/espressif/components/esp_rom/Kconfig.projbuild;/home/user/csse4011/zephyrproject/modules/hal/espressif/components/esptool_py/Kconfig.projbuild;/home/user/csse4011/zephyrproject/modules/hal/espressif/components/partition_table/Kconfig.projbuild"
+    },
+    "build_components" : [ "bootloader", "bootloader_support", "efuse", "esp32c3", "esp_common", "esp_hw_support", "esp_rom", "esp_system", "esptool_py", "freertos", "hal", "log", "main", "micro-ecc", "newlib", "partition_table", "riscv", "soc", "spi_flash", "" ],
+    "build_component_paths" : [ "/home/user/csse4011/zephyrproject/modules/hal/espressif/components/bootloader", "/home/user/csse4011/zephyrproject/modules/hal/espressif/components/bootloader_support", "/home/user/csse4011/zephyrproject/modules/hal/espressif/components/efuse", "/home/user/csse4011/zephyrproject/modules/hal/espressif/components/esp32c3", "/home/user/csse4011/zephyrproject/modules/hal/espressif/components/esp_common", "/home/user/csse4011/zephyrproject/modules/hal/espressif/components/esp_hw_support", "/home/user/csse4011/zephyrproject/modules/hal/espressif/components/esp_rom", "/home/user/csse4011/zephyrproject/modules/hal/espressif/components/esp_system", "/home/user/csse4011/zephyrproject/modules/hal/espressif/components/esptool_py", "/home/user/csse4011/zephyrproject/modules/hal/espressif/components/freertos", "/home/user/csse4011/zephyrproject/modules/hal/espressif/components/hal", "/home/user/csse4011/zephyrproject/modules/hal/espressif/components/log", "/home/user/csse4011/zephyrproject/modules/hal/espressif/components/bootloader/subproject/main", "/home/user/csse4011/zephyrproject/modules/hal/espressif/components/bootloader/subproject/components/micro-ecc", "/home/user/csse4011/zephyrproject/modules/hal/espressif/components/newlib", "/home/user/csse4011/zephyrproject/modules/hal/espressif/components/partition_table", "/home/user/csse4011/zephyrproject/modules/hal/espressif/components/riscv", "/home/user/csse4011/zephyrproject/modules/hal/espressif/components/soc", "/home/user/csse4011/zephyrproject/modules/hal/espressif/components/spi_flash", "" ]
+}

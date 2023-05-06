@@ -1,0 +1,13 @@
+# Target labels
+ EspIdfBootloader
+# Source files and their labels
+/home/user/csse4011/Vidar-Blue/esp/build/zephyr/soc/riscv/esp32c3/CMakeFiles/EspIdfBootloader
+/home/user/csse4011/Vidar-Blue/esp/build/zephyr/soc/riscv/esp32c3/CMakeFiles/EspIdfBootloader.rule
+/home/user/csse4011/Vidar-Blue/esp/build/zephyr/soc/riscv/esp32c3/CMakeFiles/EspIdfBootloader-complete.rule
+/home/user/csse4011/Vidar-Blue/esp/build/esp-idf/src/EspIdfBootloader-stamp/EspIdfBootloader-build.rule
+/home/user/csse4011/Vidar-Blue/esp/build/esp-idf/src/EspIdfBootloader-stamp/EspIdfBootloader-configure.rule
+/home/user/csse4011/Vidar-Blue/esp/build/esp-idf/src/EspIdfBootloader-stamp/EspIdfBootloader-download.rule
+/home/user/csse4011/Vidar-Blue/esp/build/esp-idf/src/EspIdfBootloader-stamp/EspIdfBootloader-install.rule
+/home/user/csse4011/Vidar-Blue/esp/build/esp-idf/src/EspIdfBootloader-stamp/EspIdfBootloader-mkdir.rule
+/home/user/csse4011/Vidar-Blue/esp/build/esp-idf/src/EspIdfBootloader-stamp/EspIdfBootloader-patch.rule
+/home/user/csse4011/Vidar-Blue/esp/build/esp-idf/src/EspIdfBootloader-stamp/EspIdfBootloader-update.rule

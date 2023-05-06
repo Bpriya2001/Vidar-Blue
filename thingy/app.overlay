@@ -1,0 +1,11 @@
+/ {
+    chosen {
+        zephyr,temp = &temp; 
+    };
+
+};
+
+&temp {
+    compatible = "nordic,nrf-temp";
+    label = "temp";
+};
