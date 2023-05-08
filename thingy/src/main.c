@@ -45,7 +45,7 @@ static struct bt_uuid_128 ultra_uuid = BT_UUID_INIT_128(
     0x26, 0x49, 0x60, 0xeb, 0x06, 0xa7, 0xca, 0xcb);
 
 /*Buffer containing values for ultrasonic sensor*/
-double buf_ultra[2] = {4.0, 5.0};
+double temp_hum[2] = {4.0, 5.0};
 
 /** 
 * callback function to update values of the ultrasonic sensor
@@ -56,7 +56,7 @@ static ssize_t read_ultra(struct bt_conn *conn,
     const int16_t *value = attr->user_data;
 
     return bt_gatt_attr_read(conn, attr, buf, len, offset, value,
-                             sizeof(buf_ultra));
+                             sizeof(temp_hum));
 }
 
 /** 
@@ -68,7 +68,7 @@ BT_GATT_SERVICE_DEFINE(mobile_svc,
                 BT_GATT_CHARACTERISTIC(&ultra_uuid.uuid,
                                         BT_GATT_CHRC_READ,
                                         BT_GATT_PERM_READ,
-                                        read_ultra, NULL, &buf_ultra),);
+                                        read_ultra, NULL, &temp_hum),);
 
 /** 
 * Function to enable bluetooth and advertise uuid for connection
@@ -153,12 +153,12 @@ static void process_sample(const struct device *dev)
 
 	/* display temperature */
 	printf("Temperature:%.1f C\n", sensor_value_to_double(&temp));
-	buf_ultra[0] = sensor_value_to_double(&temp);
+	temp_hum[0] = sensor_value_to_double(&temp);
 
 	/* display humidity */
 	printk("Relative Humidity:%.1f%%\n",
 	       sensor_value_to_double(&hum));
-	buf_ultra[1] = sensor_value_to_double(&hum);
+	temp_hum[1] = sensor_value_to_double(&hum);
 }
 
 static void hts221_handler(const struct device *dev,
@@ -167,9 +167,10 @@ static void hts221_handler(const struct device *dev,
 	process_sample(dev);
 }
 
-
-void main(void) {
-	const struct device *const dev = DEVICE_DT_GET_ONE(st_hts221);
+/** 
+* Function to enable hts221 sensors
+*/
+static void hts221_ready(const struct device *dev) {
 
 	if (!device_is_ready(dev)) {
 		printf("sensor: device not ready.\n");
@@ -186,12 +187,19 @@ void main(void) {
 			return;
 		}
 	}
+}
+
+
+void main(void) {
 
 	bt_ready();
     bt_conn_cb_register(&conn_callbacks);
 
+	const struct device *const dev_hts = DEVICE_DT_GET_ONE(st_hts221);
+	hts221_ready(dev_hts);
+
 	while (!IS_ENABLED(CONFIG_HTS221_TRIGGER)) {
-		//process_sample(dev);
+		process_sample(dev_hts);
 		k_sleep(K_MSEC(2000));
 	}
 
