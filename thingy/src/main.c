@@ -11,6 +11,8 @@
 #include <zephyr/drivers/gpio.h>
 #include <zephyr/device.h>
 #include <zephyr/drivers/sensor.h>
+#include <stdio.h>
+#include <zephyr/sys/util.h>
 
 #include <zephyr/bluetooth/bluetooth.h>
 #include <zephyr/bluetooth/hci.h>
@@ -18,8 +20,6 @@
 #include <zephyr/bluetooth/uuid.h>
 #include <zephyr/bluetooth/gatt.h>
 
-#define AHU_SHELL_THREAD_PRIORITY 1
-#define AHU_SHELL_THREAD_STACK 500
 
 /*Bluetooth connection flag*/
 bool bluetooth = false;
@@ -45,7 +45,7 @@ static struct bt_uuid_128 ultra_uuid = BT_UUID_INIT_128(
     0x26, 0x49, 0x60, 0xeb, 0x06, 0xa7, 0xca, 0xcb);
 
 /*Buffer containing values for ultrasonic sensor*/
-int16_t buf_ultra[] = {4, 5, 5, 4, 1, 4, 7 , 4};
+double buf_ultra[2] = {4.0, 5.0};
 
 /** 
 * callback function to update values of the ultrasonic sensor
@@ -76,18 +76,18 @@ BT_GATT_SERVICE_DEFINE(mobile_svc,
 static void bt_ready() {
     int err = bt_enable(NULL);
 	if (err) {
-		printk("Bluetooth init failed (err %d)", err);
+		printf("Bluetooth init failed (err %d)", err);
 		return;
 	}
-	printk("Bluetooth initialized");
+	printf("Bluetooth initialized");
 	/* Start advertising */
 	err = bt_le_adv_start(BT_LE_ADV_CONN, ad, ARRAY_SIZE(ad), NULL, 0);
 	if (err) {
-		printk("Advertising failed to start (err %d)", err);
+		printf("Advertising failed to start (err %d)", err);
 		return;
 	}
 
-	printk("Configuration mode: waiting connections...");
+	printf("Configuration mode: waiting connections...");
 }
 
 /** 
@@ -95,16 +95,16 @@ static void bt_ready() {
 */
 static void connected(struct bt_conn *connected, uint8_t err) {
 	if (err) {
-		printk("Connection failed (err %u)", err);
+		printf("Connection failed (err %u)", err);
 	} else {
-		printk("Connected");
+		printf("Connected");
 		if (!conn) {
 			conn = bt_conn_ref(connected);
 		}
         bluetooth = true;
 	}
     
-    printk("connected\n");
+    printf("connected\n");
 }
 
 /** 
@@ -118,7 +118,7 @@ static void disconnected(struct bt_conn *disconn, uint8_t reason) {
 
     bluetooth = false;
 
-	printk("Disconnected (reason %u)", reason);
+	printf("Disconnected (reason %u)", reason);
 }
 
 /** 
@@ -129,42 +129,73 @@ static struct bt_conn_cb conn_callbacks = {
     .disconnected = disconnected,
 };
 
-
-void main(void) {
-	bt_ready();
-    bt_conn_cb_register(&conn_callbacks);
-
-	/*const struct device *const dev = DEVICE_DT_GET(DT_CHOSEN(zephyr_temp));
-	//struct sensor_value val;
-	//int rc;
-
-	if (!device_is_ready(dev)) {
-		printk("Temperature sensor is not ready\n");
+static void process_sample(const struct device *dev)
+{
+	static unsigned int obs;
+	struct sensor_value temp, hum;
+	if (sensor_sample_fetch(dev) < 0) {
+		printf("Sensor sample update error\n");
 		return;
 	}
 
-	printk("ESP32 Die temperature sensor test\n");*/
+	if (sensor_channel_get(dev, SENSOR_CHAN_AMBIENT_TEMP, &temp) < 0) {
+		printf("Cannot read HTS221 temperature channel\n");
+		return;
+	}
+
+	if (sensor_channel_get(dev, SENSOR_CHAN_HUMIDITY, &hum) < 0) {
+		printf("Cannot read HTS221 humidity channel\n");
+		return;
+	}
+
+	++obs;
+	printf("Observation:%u\n", obs);
+
+	/* display temperature */
+	printf("Temperature:%.1f C\n", sensor_value_to_double(&temp));
+	buf_ultra[0] = sensor_value_to_double(&temp);
+
+	/* display humidity */
+	printk("Relative Humidity:%.1f%%\n",
+	       sensor_value_to_double(&hum));
+	buf_ultra[1] = sensor_value_to_double(&hum);
+}
+
+static void hts221_handler(const struct device *dev,
+			   const struct sensor_trigger *trig)
+{
+	process_sample(dev);
+}
+
+
+void main(void) {
+	const struct device *const dev = DEVICE_DT_GET_ONE(st_hts221);
+
+	if (!device_is_ready(dev)) {
+		printf("sensor: device not ready.\n");
+		return;
+	}
+
+	if (IS_ENABLED(CONFIG_HTS221_TRIGGER)) {
+		struct sensor_trigger trig = {
+			.type = SENSOR_TRIG_DATA_READY,
+			.chan = SENSOR_CHAN_ALL,
+		};
+		if (sensor_trigger_set(dev, &trig, hts221_handler) < 0) {
+			printf("Cannot configure trigger\n");
+			return;
+		}
+	}
+
+	bt_ready();
+    bt_conn_cb_register(&conn_callbacks);
+
+	while (!IS_ENABLED(CONFIG_HTS221_TRIGGER)) {
+		//process_sample(dev);
+		k_sleep(K_MSEC(2000));
+	}
 
 	/**while (1) {
-		k_sleep(K_MSEC(300));
-
-		/* fetch sensor samples 
-		rc = sensor_sample_fetch(dev);
-		if (rc) {
-			printk("Failed to fetch sample (%d)\n", rc);
-			return;
-		}
-
-		rc = sensor_channel_get(dev, SENSOR_CHAN_DIE_TEMP, &val);
-		if (rc) {
-			printk("Failed to get data (%d)\n", rc);
-			return;
-		}
-
-		printk("Current temperature: %.1f °C\n", sensor_value_to_double(&val));
+		k_msleep(100);
 	}*/
-
-    while(1) {
-        k_msleep(100);
-    }
 }

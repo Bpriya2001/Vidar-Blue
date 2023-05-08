@@ -328,6 +328,25 @@ rule C_STATIC_LIBRARY_LINKER__soc__arm__nordic_nrf__nrf52_
 #############################################
 # Rule for compiling C files.
 
+rule C_COMPILER__boards__arm__thingy52_nrf52832_
+  depfile = $DEP_FILE
+  deps = gcc
+  command = ccache /home/user/zephyr-sdk-0.15.2/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  description = Building C object $out
+
+
+#############################################
+# Rule for linking C static library.
+
+rule C_STATIC_LIBRARY_LINKER__boards__arm__thingy52_nrf52832_
+  command = $PRE_LINK && ccache /home/user/.local/lib/python3.9/site-packages/cmake/data/bin/cmake -E rm -f $TARGET_FILE && ccache /home/user/zephyr-sdk-0.15.2/arm-zephyr-eabi/bin/arm-zephyr-eabi-ar qc $TARGET_FILE $LINK_FLAGS $in && ccache /home/user/zephyr-sdk-0.15.2/arm-zephyr-eabi/bin/arm-zephyr-eabi-ranlib $TARGET_FILE && $POST_BUILD
+  description = Linking C static library $TARGET_FILE
+  restat = $RESTAT
+
+
+#############################################
+# Rule for compiling C files.
+
 rule C_COMPILER__subsys__bluetooth__common_
   depfile = $DEP_FILE
   deps = gcc
@@ -510,6 +529,139 @@ rule C_COMPILER__drivers__i2c_
 # Rule for linking C static library.
 
 rule C_STATIC_LIBRARY_LINKER__drivers__i2c_
+  command = $PRE_LINK && ccache /home/user/.local/lib/python3.9/site-packages/cmake/data/bin/cmake -E rm -f $TARGET_FILE && ccache /home/user/zephyr-sdk-0.15.2/arm-zephyr-eabi/bin/arm-zephyr-eabi-ar qc $TARGET_FILE $LINK_FLAGS $in && ccache /home/user/zephyr-sdk-0.15.2/arm-zephyr-eabi/bin/arm-zephyr-eabi-ranlib $TARGET_FILE && $POST_BUILD
+  description = Linking C static library $TARGET_FILE
+  restat = $RESTAT
+
+
+#############################################
+# Rule for compiling C files.
+
+rule C_COMPILER__drivers__sensor_
+  depfile = $DEP_FILE
+  deps = gcc
+  command = ccache /home/user/zephyr-sdk-0.15.2/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  description = Building C object $out
+
+
+#############################################
+# Rule for linking C static library.
+
+rule C_STATIC_LIBRARY_LINKER__drivers__sensor_
+  command = $PRE_LINK && ccache /home/user/.local/lib/python3.9/site-packages/cmake/data/bin/cmake -E rm -f $TARGET_FILE && ccache /home/user/zephyr-sdk-0.15.2/arm-zephyr-eabi/bin/arm-zephyr-eabi-ar qc $TARGET_FILE $LINK_FLAGS $in && ccache /home/user/zephyr-sdk-0.15.2/arm-zephyr-eabi/bin/arm-zephyr-eabi-ranlib $TARGET_FILE && $POST_BUILD
+  description = Linking C static library $TARGET_FILE
+  restat = $RESTAT
+
+
+#############################################
+# Rule for compiling C files.
+
+rule C_COMPILER__drivers__sensor__ccs811_
+  depfile = $DEP_FILE
+  deps = gcc
+  command = ccache /home/user/zephyr-sdk-0.15.2/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  description = Building C object $out
+
+
+#############################################
+# Rule for linking C static library.
+
+rule C_STATIC_LIBRARY_LINKER__drivers__sensor__ccs811_
+  command = $PRE_LINK && ccache /home/user/.local/lib/python3.9/site-packages/cmake/data/bin/cmake -E rm -f $TARGET_FILE && ccache /home/user/zephyr-sdk-0.15.2/arm-zephyr-eabi/bin/arm-zephyr-eabi-ar qc $TARGET_FILE $LINK_FLAGS $in && ccache /home/user/zephyr-sdk-0.15.2/arm-zephyr-eabi/bin/arm-zephyr-eabi-ranlib $TARGET_FILE && $POST_BUILD
+  description = Linking C static library $TARGET_FILE
+  restat = $RESTAT
+
+
+#############################################
+# Rule for compiling C files.
+
+rule C_COMPILER__drivers__sensor__hts221_
+  depfile = $DEP_FILE
+  deps = gcc
+  command = ccache /home/user/zephyr-sdk-0.15.2/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  description = Building C object $out
+
+
+#############################################
+# Rule for linking C static library.
+
+rule C_STATIC_LIBRARY_LINKER__drivers__sensor__hts221_
+  command = $PRE_LINK && ccache /home/user/.local/lib/python3.9/site-packages/cmake/data/bin/cmake -E rm -f $TARGET_FILE && ccache /home/user/zephyr-sdk-0.15.2/arm-zephyr-eabi/bin/arm-zephyr-eabi-ar qc $TARGET_FILE $LINK_FLAGS $in && ccache /home/user/zephyr-sdk-0.15.2/arm-zephyr-eabi/bin/arm-zephyr-eabi-ranlib $TARGET_FILE && $POST_BUILD
+  description = Linking C static library $TARGET_FILE
+  restat = $RESTAT
+
+
+#############################################
+# Rule for compiling C files.
+
+rule C_COMPILER__drivers__sensor__lis2dh_
+  depfile = $DEP_FILE
+  deps = gcc
+  command = ccache /home/user/zephyr-sdk-0.15.2/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  description = Building C object $out
+
+
+#############################################
+# Rule for linking C static library.
+
+rule C_STATIC_LIBRARY_LINKER__drivers__sensor__lis2dh_
+  command = $PRE_LINK && ccache /home/user/.local/lib/python3.9/site-packages/cmake/data/bin/cmake -E rm -f $TARGET_FILE && ccache /home/user/zephyr-sdk-0.15.2/arm-zephyr-eabi/bin/arm-zephyr-eabi-ar qc $TARGET_FILE $LINK_FLAGS $in && ccache /home/user/zephyr-sdk-0.15.2/arm-zephyr-eabi/bin/arm-zephyr-eabi-ranlib $TARGET_FILE && $POST_BUILD
+  description = Linking C static library $TARGET_FILE
+  restat = $RESTAT
+
+
+#############################################
+# Rule for compiling C files.
+
+rule C_COMPILER__drivers__sensor__lps22hb_
+  depfile = $DEP_FILE
+  deps = gcc
+  command = ccache /home/user/zephyr-sdk-0.15.2/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  description = Building C object $out
+
+
+#############################################
+# Rule for linking C static library.
+
+rule C_STATIC_LIBRARY_LINKER__drivers__sensor__lps22hb_
+  command = $PRE_LINK && ccache /home/user/.local/lib/python3.9/site-packages/cmake/data/bin/cmake -E rm -f $TARGET_FILE && ccache /home/user/zephyr-sdk-0.15.2/arm-zephyr-eabi/bin/arm-zephyr-eabi-ar qc $TARGET_FILE $LINK_FLAGS $in && ccache /home/user/zephyr-sdk-0.15.2/arm-zephyr-eabi/bin/arm-zephyr-eabi-ranlib $TARGET_FILE && $POST_BUILD
+  description = Linking C static library $TARGET_FILE
+  restat = $RESTAT
+
+
+#############################################
+# Rule for compiling C files.
+
+rule C_COMPILER__drivers__sensor__nrf5_
+  depfile = $DEP_FILE
+  deps = gcc
+  command = ccache /home/user/zephyr-sdk-0.15.2/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  description = Building C object $out
+
+
+#############################################
+# Rule for linking C static library.
+
+rule C_STATIC_LIBRARY_LINKER__drivers__sensor__nrf5_
+  command = $PRE_LINK && ccache /home/user/.local/lib/python3.9/site-packages/cmake/data/bin/cmake -E rm -f $TARGET_FILE && ccache /home/user/zephyr-sdk-0.15.2/arm-zephyr-eabi/bin/arm-zephyr-eabi-ar qc $TARGET_FILE $LINK_FLAGS $in && ccache /home/user/zephyr-sdk-0.15.2/arm-zephyr-eabi/bin/arm-zephyr-eabi-ranlib $TARGET_FILE && $POST_BUILD
+  description = Linking C static library $TARGET_FILE
+  restat = $RESTAT
+
+
+#############################################
+# Rule for compiling C files.
+
+rule C_COMPILER__drivers__sensor__stmemsc_
+  depfile = $DEP_FILE
+  deps = gcc
+  command = ccache /home/user/zephyr-sdk-0.15.2/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  description = Building C object $out
+
+
+#############################################
+# Rule for linking C static library.
+
+rule C_STATIC_LIBRARY_LINKER__drivers__sensor__stmemsc_
   command = $PRE_LINK && ccache /home/user/.local/lib/python3.9/site-packages/cmake/data/bin/cmake -E rm -f $TARGET_FILE && ccache /home/user/zephyr-sdk-0.15.2/arm-zephyr-eabi/bin/arm-zephyr-eabi-ar qc $TARGET_FILE $LINK_FLAGS $in && ccache /home/user/zephyr-sdk-0.15.2/arm-zephyr-eabi/bin/arm-zephyr-eabi-ranlib $TARGET_FILE && $POST_BUILD
   description = Linking C static library $TARGET_FILE
   restat = $RESTAT

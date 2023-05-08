@@ -112,8 +112,8 @@ CMAKE_CXX_FLAGS_RELEASE:STRING=-O3 -DNDEBUG
 //Flags used by the CXX compiler during RELWITHDEBINFO builds.
 CMAKE_CXX_FLAGS_RELWITHDEBINFO:STRING=-O2 -g -DNDEBUG
 
-//Path to a program.
-CMAKE_C_COMPILER:FILEPATH=/home/user/zephyr-sdk-0.15.2/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc
+//C compiler
+CMAKE_C_COMPILER:STRING=/home/user/zephyr-sdk-0.15.2/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc
 
 //A wrapper around 'ar' adding the appropriate '--plugin' option
 // for the GCC compiler
@@ -304,7 +304,7 @@ DTC:FILEPATH=/home/user/zephyr-sdk-0.15.2/sysroots/x86_64-pokysdk-linux/usr/bin/
 // parameter. These settings will override the settings in the
 // board's .dts file. Multiple files may be listed, e.g. DTC_OVERLAY_FILE="dts1.overlay
 // dts2.overlay"
-DTC_OVERLAY_FILE:STRING=app.overlay
+DTC_OVERLAY_FILE:STRING=
 
 //Path to a program.
 GPERF:FILEPATH=/usr/bin/gperf
@@ -444,6 +444,8 @@ CMAKE_CXX_FLAGS_MINSIZEREL-ADVANCED:INTERNAL=1
 CMAKE_CXX_FLAGS_RELEASE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_CXX_FLAGS_RELWITHDEBINFO
 CMAKE_CXX_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CMAKE_C_COMPILER
+CMAKE_C_COMPILER-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_C_COMPILER_AR
 CMAKE_C_COMPILER_AR-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_C_COMPILER_RANLIB
@@ -502,7 +504,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=134
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=142
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP
@@ -562,8 +564,6 @@ _Python3_EXECUTABLE:INTERNAL=/usr/bin/python3.9
 //Python3 Properties
 _Python3_INTERPRETER_PROPERTIES:INTERNAL=Python;3;9;2;64;;cpython-39-x86_64-linux-gnu;/usr/lib/python3.9;/usr/lib/python3.9;/usr/lib/python3/dist-packages;/usr/lib/python3/dist-packages
 _Python3_INTERPRETER_SIGNATURE:INTERNAL=c41d1f437da25fc9878317dfb973b137
-//Interpreter reason failure
-_Python3_Interpreter_REASON_FAILURE:INTERNAL=
 //NumPy reason failure
 _Python3_NumPy_REASON_FAILURE:INTERNAL=
 

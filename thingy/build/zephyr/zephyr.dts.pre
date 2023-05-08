@@ -839,17 +839,4 @@
  };
 };
 # 0 "<command-line>" 2
-# 1 "./app.overlay" 1
-/ {
-    chosen {
-        zephyr,temp = &temp;
-    };
-
-};
-
-&temp {
-    compatible = "nordic,nrf-temp";
-    label = "temp";
-};
-# 0 "<command-line>" 2
 # 1 "/home/user/csse4011/zephyrproject/zephyr/misc/empty_file.c"

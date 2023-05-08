@@ -9038,26 +9038,6 @@
 #define DT_N_S_soc_S_temp_4000c000_P_compatible_FOREACH_PROP_ELEM_SEP_VARGS(fn, sep, ...) fn(DT_N_S_soc_S_temp_4000c000, compatible, 0, __VA_ARGS__)
 #define DT_N_S_soc_S_temp_4000c000_P_compatible_LEN 1
 #define DT_N_S_soc_S_temp_4000c000_P_compatible_EXISTS 1
-#define DT_N_S_soc_S_temp_4000c000_P_label "temp"
-#define DT_N_S_soc_S_temp_4000c000_P_label_STRING_TOKEN temp
-#define DT_N_S_soc_S_temp_4000c000_P_label_STRING_UPPER_TOKEN TEMP
-#define DT_N_S_soc_S_temp_4000c000_P_label_FOREACH_PROP_ELEM(fn) fn(DT_N_S_soc_S_temp_4000c000, label, 0) \
-	fn(DT_N_S_soc_S_temp_4000c000, label, 1) \
-	fn(DT_N_S_soc_S_temp_4000c000, label, 2) \
-	fn(DT_N_S_soc_S_temp_4000c000, label, 3)
-#define DT_N_S_soc_S_temp_4000c000_P_label_FOREACH_PROP_ELEM_SEP(fn, sep) fn(DT_N_S_soc_S_temp_4000c000, label, 0) DT_DEBRACKET_INTERNAL sep \
-	fn(DT_N_S_soc_S_temp_4000c000, label, 1) DT_DEBRACKET_INTERNAL sep \
-	fn(DT_N_S_soc_S_temp_4000c000, label, 2) DT_DEBRACKET_INTERNAL sep \
-	fn(DT_N_S_soc_S_temp_4000c000, label, 3)
-#define DT_N_S_soc_S_temp_4000c000_P_label_FOREACH_PROP_ELEM_VARGS(fn, ...) fn(DT_N_S_soc_S_temp_4000c000, label, 0, __VA_ARGS__) \
-	fn(DT_N_S_soc_S_temp_4000c000, label, 1, __VA_ARGS__) \
-	fn(DT_N_S_soc_S_temp_4000c000, label, 2, __VA_ARGS__) \
-	fn(DT_N_S_soc_S_temp_4000c000, label, 3, __VA_ARGS__)
-#define DT_N_S_soc_S_temp_4000c000_P_label_FOREACH_PROP_ELEM_SEP_VARGS(fn, sep, ...) fn(DT_N_S_soc_S_temp_4000c000, label, 0, __VA_ARGS__) DT_DEBRACKET_INTERNAL sep \
-	fn(DT_N_S_soc_S_temp_4000c000, label, 1, __VA_ARGS__) DT_DEBRACKET_INTERNAL sep \
-	fn(DT_N_S_soc_S_temp_4000c000, label, 2, __VA_ARGS__) DT_DEBRACKET_INTERNAL sep \
-	fn(DT_N_S_soc_S_temp_4000c000, label, 3, __VA_ARGS__)
-#define DT_N_S_soc_S_temp_4000c000_P_label_EXISTS 1
 #define DT_N_S_soc_S_temp_4000c000_P_wakeup_source 0
 #define DT_N_S_soc_S_temp_4000c000_P_wakeup_source_EXISTS 1
 
@@ -11964,8 +11944,6 @@
 #define DT_CHOSEN_zephyr_flash_EXISTS            1
 #define DT_CHOSEN_zephyr_code_partition          DT_N_S_soc_S_flash_controller_4001e000_S_flash_0_S_partitions_S_partition_c000
 #define DT_CHOSEN_zephyr_code_partition_EXISTS   1
-#define DT_CHOSEN_zephyr_temp                    DT_N_S_soc_S_temp_4000c000
-#define DT_CHOSEN_zephyr_temp_EXISTS             1
 
 /* Macros for iterating over all nodes and enabled nodes */
 #define DT_FOREACH_HELPER(fn) fn(DT_N) fn(DT_N_S_chosen) fn(DT_N_S_aliases) fn(DT_N_S_soc) fn(DT_N_S_soc_S_interrupt_controller_e000e100) fn(DT_N_S_soc_S_timer_e000e010) fn(DT_N_S_soc_S_ficr_10000000) fn(DT_N_S_soc_S_uicr_10001000) fn(DT_N_S_soc_S_memory_20000000) fn(DT_N_S_soc_S_clock_40000000) fn(DT_N_S_soc_S_power_40000000) fn(DT_N_S_soc_S_bprot_40000000) fn(DT_N_S_soc_S_radio_40001000) fn(DT_N_S_soc_S_uart_40002000) fn(DT_N_S_soc_S_i2c_40003000) fn(DT_N_S_soc_S_i2c_40003000_S_sx1509b_3e) fn(DT_N_S_soc_S_i2c_40003000_S_lps22hb_press_5c) fn(DT_N_S_soc_S_i2c_40003000_S_hts221_5f) fn(DT_N_S_soc_S_i2c_40003000_S_ccs811_5a) fn(DT_N_S_soc_S_spi_40003000) fn(DT_N_S_soc_S_i2c_40004000) fn(DT_N_S_soc_S_i2c_40004000_S_lis2dh12_19) fn(DT_N_S_soc_S_spi_40004000) fn(DT_N_S_soc_S_nfct_40005000) fn(DT_N_S_soc_S_gpiote_40006000) fn(DT_N_S_soc_S_adc_40007000) fn(DT_N_S_soc_S_timer_40008000) fn(DT_N_S_soc_S_timer_40009000) fn(DT_N_S_soc_S_timer_4000a000) fn(DT_N_S_soc_S_rtc_4000b000) fn(DT_N_S_soc_S_temp_4000c000) fn(DT_N_S_soc_S_random_4000d000) fn(DT_N_S_soc_S_ecb_4000e000) fn(DT_N_S_soc_S_ccm_4000f000) fn(DT_N_S_soc_S_watchdog_40010000) fn(DT_N_S_soc_S_rtc_40011000) fn(DT_N_S_soc_S_qdec_40012000) fn(DT_N_S_soc_S_comparator_40013000) fn(DT_N_S_soc_S_egu_40014000) fn(DT_N_S_soc_S_egu_40015000) fn(DT_N_S_soc_S_egu_40016000) fn(DT_N_S_soc_S_egu_40017000) fn(DT_N_S_soc_S_egu_40018000) fn(DT_N_S_soc_S_egu_40019000) fn(DT_N_S_soc_S_timer_4001a000) fn(DT_N_S_soc_S_timer_4001b000) fn(DT_N_S_soc_S_pwm_4001c000) fn(DT_N_S_soc_S_pdm_4001d000) fn(DT_N_S_soc_S_flash_controller_4001e000) fn(DT_N_S_soc_S_flash_controller_4001e000_S_flash_0) fn(DT_N_S_soc_S_flash_controller_4001e000_S_flash_0_S_partitions) fn(DT_N_S_soc_S_flash_controller_4001e000_S_flash_0_S_partitions_S_partition_0) fn(DT_N_S_soc_S_flash_controller_4001e000_S_flash_0_S_partitions_S_partition_c000) fn(DT_N_S_soc_S_flash_controller_4001e000_S_flash_0_S_partitions_S_partition_3e000) fn(DT_N_S_soc_S_flash_controller_4001e000_S_flash_0_S_partitions_S_partition_70000) fn(DT_N_S_soc_S_flash_controller_4001e000_S_flash_0_S_partitions_S_partition_7a000) fn(DT_N_S_soc_S_ppi_4001f000) fn(DT_N_S_soc_S_mwu_40020000) fn(DT_N_S_soc_S_pwm_40021000) fn(DT_N_S_soc_S_pwm_40022000) fn(DT_N_S_soc_S_spi_40023000) fn(DT_N_S_soc_S_rtc_40024000) fn(DT_N_S_soc_S_i2s_40025000) fn(DT_N_S_soc_S_gpio_50000000) fn(DT_N_S_pin_controller) fn(DT_N_S_pin_controller_S_uart0_default) fn(DT_N_S_pin_controller_S_uart0_default_S_group1) fn(DT_N_S_pin_controller_S_uart0_sleep) fn(DT_N_S_pin_controller_S_uart0_sleep_S_group1) fn(DT_N_S_pin_controller_S_i2c0_default) fn(DT_N_S_pin_controller_S_i2c0_default_S_group1) fn(DT_N_S_pin_controller_S_i2c0_sleep) fn(DT_N_S_pin_controller_S_i2c0_sleep_S_group1) fn(DT_N_S_pin_controller_S_i2c1_default) fn(DT_N_S_pin_controller_S_i2c1_default_S_group1) fn(DT_N_S_pin_controller_S_i2c1_sleep) fn(DT_N_S_pin_controller_S_i2c1_sleep_S_group1) fn(DT_N_S_entropy_bt_hci) fn(DT_N_S_cpus) fn(DT_N_S_cpus_S_cpu_0) fn(DT_N_S_cpus_S_cpu_0_S_itm_e0000000) fn(DT_N_S_sw_pwm) fn(DT_N_S_leds) fn(DT_N_S_leds_S_led_0) fn(DT_N_S_leds_S_led_1) fn(DT_N_S_leds_S_led_2) fn(DT_N_S_buttons) fn(DT_N_S_buttons_S_button_0) fn(DT_N_S_vbatt) fn(DT_N_S_vdd_pwr_ctrl) fn(DT_N_S_spk_pwr_ctrl) fn(DT_N_S_mpu_pwr_ctrl) fn(DT_N_S_mic_pwr_ctrl) fn(DT_N_S_ccs_pwr_ctrl)

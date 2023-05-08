@@ -35,7 +35,7 @@ static struct bt_uuid_128 ultra_uuid = BT_UUID_INIT_128(
 
 uint32_t timeStamp = 0;
 //ULTRA READ BUFFER
-int16_t ultra_buf[] = {0,0,0,0,0,0,0,0};
+double ultra_buf[2] = {0.0, 0.0};
 
 /** 
 * Connection call back function
@@ -223,7 +223,10 @@ uint8_t read_ultrasonic(struct bt_conn *conn, uint8_t err,
                                const void *data, uint16_t length) {
 
     memcpy(&ultra_buf, data, sizeof(ultra_buf));
-    printk("ULTRA: %d, %d, %d, %d, %d, %d, %d, %d\n", ultra_buf[0], ultra_buf[1], ultra_buf[2], ultra_buf[3], ultra_buf[4], ultra_buf[5], ultra_buf[6], ultra_buf[7]);
+    //printk(" %.1f, %.1f, %.1f, %.1f, %.1f, %.1f, %.1f, %.1f\n", ultra_buf[0], ultra_buf[1], ultra_buf[2], ultra_buf[3], ultra_buf[4], ultra_buf[5], ultra_buf[6], ultra_buf[7]);
+    
+    //printk(" %d, %d, %d, %d, %d, %d, %d, %d\n", ultra_buf[0], ultra_buf[1], ultra_buf[2], ultra_buf[3], ultra_buf[4], ultra_buf[5], ultra_buf[6], ultra_buf[7]);
+    printk("%.1f C, %.1f%%\r\n", ultra_buf[0], ultra_buf[1]);
     return 0;
 }
 

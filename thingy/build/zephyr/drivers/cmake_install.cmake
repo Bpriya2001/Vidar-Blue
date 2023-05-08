@@ -89,6 +89,11 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
+  include("/home/user/csse4011/Vidar-Blue/thingy/build/zephyr/drivers/sensor/cmake_install.cmake")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
   include("/home/user/csse4011/Vidar-Blue/thingy/build/zephyr/drivers/regulator/cmake_install.cmake")
 endif()
 

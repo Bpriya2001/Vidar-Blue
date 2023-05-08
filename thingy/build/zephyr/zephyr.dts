@@ -15,7 +15,6 @@
 		zephyr,sram = &sram0;
 		zephyr,flash = &flash0;
 		zephyr,code-partition = &slot0_partition;
-		zephyr,temp = &temp;
 	};
 	aliases {
 		led0 = &led0;
@@ -229,7 +228,6 @@
 			reg = < 0x4000c000 0x1000 >;
 			interrupts = < 0xc 0x1 >;
 			status = "okay";
-			label = "temp";
 		};
 		rng: random@4000d000 {
 			compatible = "nordic,nrf-rng";
