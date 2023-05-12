@@ -4,6 +4,6 @@ digraph "Device dependency graph" {
 	12 [label="gpio@60004000\nOrdinal: 12 | Handle: 2\n/soc/gpio@60004000"]
 	39 [label="uart@60000000\nOrdinal: 39 | Handle: 3\n/soc/uart@60000000"]
 	41 [label="uart@60043000\nOrdinal: 41 | Handle: 4\n/soc/uart@60043000"]
-	27 -> 39
 	27 -> 41
+	27 -> 39
 }

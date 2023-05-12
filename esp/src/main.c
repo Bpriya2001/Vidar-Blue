@@ -33,9 +33,14 @@ static struct bt_uuid_128 ultra_uuid = BT_UUID_INIT_128(
     0xd1, 0x92, 0x67, 0x35, 0x78, 0x16, 0x21, 0x91,
     0x26, 0x49, 0x60, 0xeb, 0x06, 0xa7, 0xca, 0xcb);
 
+static struct bt_uuid_128 gas_uuid = BT_UUID_INIT_128(
+    0xd2, 0x92, 0x67, 0x35, 0x78, 0x16, 0x21, 0x91,
+    0x26, 0x49, 0x60, 0xeb, 0x06, 0xa7, 0xca, 0xcb);
+
 uint32_t timeStamp = 0;
 //ULTRA READ BUFFER
-double ultra_buf[2] = {0.0, 0.0};
+uint8_t hts_buf[5] = {0xAA, 0x04, 0x05, 0x04, 0x05};
+
 
 /** 
 * Connection call back function
@@ -218,17 +223,16 @@ void thread_bsu_ble_init (void) {
 /**
 * Function to read vlaues from the ultrasonic sensor to the respective buffer
 */
-uint8_t read_ultrasonic(struct bt_conn *conn, uint8_t err,
+uint8_t read_hts(struct bt_conn *conn, uint8_t err,
                                struct bt_gatt_read_params *params,
                                const void *data, uint16_t length) {
 
-    memcpy(&ultra_buf, data, sizeof(ultra_buf));
-    //printk(" %.1f, %.1f, %.1f, %.1f, %.1f, %.1f, %.1f, %.1f\n", ultra_buf[0], ultra_buf[1], ultra_buf[2], ultra_buf[3], ultra_buf[4], ultra_buf[5], ultra_buf[6], ultra_buf[7]);
+    memcpy(&hts_buf, data, sizeof(hts_buf));
     
-    //printk(" %d, %d, %d, %d, %d, %d, %d, %d\n", ultra_buf[0], ultra_buf[1], ultra_buf[2], ultra_buf[3], ultra_buf[4], ultra_buf[5], ultra_buf[6], ultra_buf[7]);
-    printk("%.1f C, %.1f%%\r\n", ultra_buf[0], ultra_buf[1]);
+    printk("sensor : %u %d %d %u %u \r\n", hts_buf[0], hts_buf[1], hts_buf[2], hts_buf[3], hts_buf[4]);
     return 0;
 }
+
 
 /**
 * Function to start reading the ultrasonic values from the AHU
@@ -236,12 +240,13 @@ uint8_t read_ultrasonic(struct bt_conn *conn, uint8_t err,
 void thread_ble_read_out(void) {
 
     static struct bt_gatt_read_params read_param_ultra = {
-        .func = read_ultrasonic,
+        .func = read_hts,
         .handle_count = 0,
         .by_uuid.uuid = &ultra_uuid.uuid,
         .by_uuid.start_handle = BT_ATT_FIRST_ATTRIBUTE_HANDLE,
         .by_uuid.end_handle = BT_ATT_LAST_ATTRIBUTE_HANDLE,
     };
+
 
     while (1) {
 

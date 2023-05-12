@@ -11,6 +11,7 @@
 #include <zephyr/drivers/gpio.h>
 #include <zephyr/device.h>
 #include <zephyr/drivers/sensor.h>
+#include <zephyr/drivers/sensor/ccs811.h>
 #include <stdio.h>
 #include <zephyr/sys/util.h>
 
@@ -20,116 +21,11 @@
 #include <zephyr/bluetooth/uuid.h>
 #include <zephyr/bluetooth/gatt.h>
 
+#include "ble.h"
 
-/*Bluetooth connection flag*/
-bool bluetooth = false;
-/*BLE_default_connection*/
-struct bt_conn *conn;
+static bool app_fw_2;
 
-/*Bluetooth connection advertising data*/
-static const struct bt_data ad[] = {
-    BT_DATA_BYTES(BT_DATA_FLAGS, (BT_LE_AD_GENERAL | BT_LE_AD_NO_BREDR)),
-    BT_DATA_BYTES(BT_DATA_UUID128_ALL,
-                  0xd0, 0x92, 0x67, 0x35, 0x78, 0x16, 0x21, 0x91,
-                  0x26, 0x49, 0x60, 0xeb, 0x06, 0xa7, 0xca, 0xcb),
-};
-
-/*UUID value for AHU */
-static struct bt_uuid_128 ahu_uuid = BT_UUID_INIT_128(
-    0xd0, 0x92, 0x67, 0x35, 0x78, 0x16, 0x21, 0x91,
-    0x26, 0x49, 0x60, 0xeb, 0x06, 0xa7, 0xca, 0xcb);
-
-/*UUID values for ultrasonic sensor*/
-static struct bt_uuid_128 ultra_uuid = BT_UUID_INIT_128(
-    0xd1, 0x92, 0x67, 0x35, 0x78, 0x16, 0x21, 0x91,
-    0x26, 0x49, 0x60, 0xeb, 0x06, 0xa7, 0xca, 0xcb);
-
-/*Buffer containing values for ultrasonic sensor*/
-double temp_hum[2] = {4.0, 5.0};
-
-/** 
-* callback function to update values of the ultrasonic sensor
-*/
-static ssize_t read_ultra(struct bt_conn *conn,
-                          const struct bt_gatt_attr *attr, void *buf,
-                          uint16_t len, uint16_t offset) {
-    const int16_t *value = attr->user_data;
-
-    return bt_gatt_attr_read(conn, attr, buf, len, offset, value,
-                             sizeof(temp_hum));
-}
-
-/** 
-* GATT service for AHU
-*/
-BT_GATT_SERVICE_DEFINE(mobile_svc,
-                BT_GATT_PRIMARY_SERVICE(&ahu_uuid),
-
-                BT_GATT_CHARACTERISTIC(&ultra_uuid.uuid,
-                                        BT_GATT_CHRC_READ,
-                                        BT_GATT_PERM_READ,
-                                        read_ultra, NULL, &temp_hum),);
-
-/** 
-* Function to enable bluetooth and advertise uuid for connection
-*/
-static void bt_ready() {
-    int err = bt_enable(NULL);
-	if (err) {
-		printf("Bluetooth init failed (err %d)", err);
-		return;
-	}
-	printf("Bluetooth initialized");
-	/* Start advertising */
-	err = bt_le_adv_start(BT_LE_ADV_CONN, ad, ARRAY_SIZE(ad), NULL, 0);
-	if (err) {
-		printf("Advertising failed to start (err %d)", err);
-		return;
-	}
-
-	printf("Configuration mode: waiting connections...");
-}
-
-/** 
-* Connection call back function
-*/
-static void connected(struct bt_conn *connected, uint8_t err) {
-	if (err) {
-		printf("Connection failed (err %u)", err);
-	} else {
-		printf("Connected");
-		if (!conn) {
-			conn = bt_conn_ref(connected);
-		}
-        bluetooth = true;
-	}
-    
-    printf("connected\n");
-}
-
-/** 
-* Disconnect callback function
-*/
-static void disconnected(struct bt_conn *disconn, uint8_t reason) {
-	if (conn) {
-		bt_conn_unref(conn);
-		conn = NULL;
-	}
-
-    bluetooth = false;
-
-	printf("Disconnected (reason %u)", reason);
-}
-
-/** 
-*register connection callback struct
-*/
-static struct bt_conn_cb conn_callbacks = {
-    .connected = connected,
-    .disconnected = disconnected,
-};
-
-static void process_sample(const struct device *dev)
+static void hts_process_sample(const struct device *dev)
 {
 	static unsigned int obs;
 	struct sensor_value temp, hum;
@@ -153,18 +49,18 @@ static void process_sample(const struct device *dev)
 
 	/* display temperature */
 	printf("Temperature:%.1f C\n", sensor_value_to_double(&temp));
-	temp_hum[0] = sensor_value_to_double(&temp);
+	sensor_buf[1] = sensor_value_to_double(&temp);
 
 	/* display humidity */
 	printk("Relative Humidity:%.1f%%\n",
 	       sensor_value_to_double(&hum));
-	temp_hum[1] = sensor_value_to_double(&hum);
+	sensor_buf[2] = sensor_value_to_double(&hum);
 }
 
 static void hts221_handler(const struct device *dev,
 			   const struct sensor_trigger *trig)
 {
-	process_sample(dev);
+	hts_process_sample(dev);
 }
 
 /** 
@@ -189,21 +85,199 @@ static void hts221_ready(const struct device *dev) {
 	}
 }
 
-
-void main(void) {
-
-	bt_ready();
-    bt_conn_cb_register(&conn_callbacks);
-
+/**
+* Function to set up hts ssensors and start reading values
+*/
+void hts_setup() {
 	const struct device *const dev_hts = DEVICE_DT_GET_ONE(st_hts221);
 	hts221_ready(dev_hts);
 
 	while (!IS_ENABLED(CONFIG_HTS221_TRIGGER)) {
-		process_sample(dev_hts);
+		hts_process_sample(dev_hts);
 		k_sleep(K_MSEC(2000));
 	}
+}
 
-	/**while (1) {
-		k_msleep(100);
-	}*/
+/*Start the thread to initialise the bluetooth for the BSU*/
+K_THREAD_DEFINE(ble_init, THREAD_BLE_BASE_STACK, ble_thread_init, NULL, NULL, NULL, THREAD_PRIORITY_BLE_BASE, 0, 0);
+
+static const char *now_str(void)
+{
+	static char buf[16]; /* ...HH:MM:SS.MMM */
+	uint32_t now = k_uptime_get_32();
+	unsigned int ms = now % MSEC_PER_SEC;
+	unsigned int s;
+	unsigned int min;
+	unsigned int h;
+
+	now /= MSEC_PER_SEC;
+	s = now % 60U;
+	now /= 60U;
+	min = now % 60U;
+	now /= 60U;
+	h = now;
+
+	snprintf(buf, sizeof(buf), "%u:%02u:%02u.%03u",
+		 h, min, s, ms);
+	return buf;
+}
+
+static int do_fetch(const struct device *dev)
+{
+	struct sensor_value co2, tvoc, voltage, current;
+	int rc = 0;
+	int baseline = -1;
+
+#ifdef CONFIG_APP_MONITOR_BASELINE
+	rc = ccs811_baseline_fetch(dev);
+	if (rc >= 0) {
+		baseline = rc;
+		rc = 0;
+	}
+#endif
+	if (rc == 0) {
+		rc = sensor_sample_fetch(dev);
+	}
+	if (rc == 0) {
+		const struct ccs811_result_type *rp = ccs811_result(dev);
+
+		sensor_channel_get(dev, SENSOR_CHAN_CO2, &co2);
+		sensor_channel_get(dev, SENSOR_CHAN_VOC, &tvoc);
+		
+		printk("\n[%s]: CCS811: %u ppm eCO2; %u ppb eTVOC\n",
+		       now_str(), co2.val1, tvoc.val1);
+		sensor_buf[3] = co2.val1;
+		sensor_buf[4] = tvoc.val1;
+		
+#ifdef CONFIG_APP_MONITOR_BASELINE
+		printk("BASELINE %04x\n", baseline);
+#endif
+		if (app_fw_2 && !(rp->status & CCS811_STATUS_DATA_READY)) {
+			printk("STALE DATA\n");
+		}
+
+		if (rp->status & CCS811_STATUS_ERROR) {
+			printk("ERROR: %02x\n", rp->error);
+		}
+	}
+	return rc;
+}
+
+#ifndef CONFIG_CCS811_TRIGGER_NONE
+
+static void trigger_handler(const struct device *dev,
+			    const struct sensor_trigger *trig)
+{
+	int rc = do_fetch(dev);
+
+	if (rc == 0) {
+		printk("Triggered fetch got %d\n", rc);
+	} else if (-EAGAIN == rc) {
+		printk("Triggered fetch got stale data\n");
+	} else {
+		printk("Triggered fetch failed: %d\n", rc);
+	}
+}
+
+#endif /* !CONFIG_CCS811_TRIGGER_NONE */
+
+static void do_main(const struct device *dev)
+{
+	while (true) {
+		int rc = do_fetch(dev);
+
+		if (rc == 0) {
+			printk("Timed fetch got %d\n", rc);
+		} else if (-EAGAIN == rc) {
+			printk("Timed fetch got stale data\n");
+		} else {
+			printk("Timed fetch failed: %d\n", rc);
+			break;
+		}
+		k_msleep(1000);
+	}
+}
+
+void main(void) {
+
+	//hts_setup();
+
+	const struct device *const dev = DEVICE_DT_GET_ONE(ams_ccs811);
+	struct ccs811_configver_type cfgver;
+	int rc;
+
+	if (!device_is_ready(dev)) {
+		printk("Device %s is not ready\n", dev->name);
+		return;
+	}
+
+	printk("device is %p, name is %s\n", dev, dev->name);
+
+	rc = ccs811_configver_fetch(dev, &cfgver);
+	if (rc == 0) {
+		printk("HW %02x; FW Boot %04x App %04x ; mode %02x\n",
+		       cfgver.hw_version, cfgver.fw_boot_version,
+		       cfgver.fw_app_version, cfgver.mode);
+		app_fw_2 = (cfgver.fw_app_version >> 8) > 0x11;
+	}
+
+#ifdef CONFIG_APP_USE_ENVDATA
+	struct sensor_value temp = { CONFIG_APP_ENV_TEMPERATURE };
+	struct sensor_value humidity = { CONFIG_APP_ENV_HUMIDITY };
+
+	rc = ccs811_envdata_update(dev, &temp, &humidity);
+	printk("ENV_DATA set for %d Cel, %d %%RH got %d\n",
+	       temp.val1, humidity.val1, rc);
+#endif
+
+#ifdef CONFIG_CCS811_TRIGGER
+	struct sensor_trigger trig = { 0 };
+
+#ifdef CONFIG_APP_TRIGGER_ON_THRESHOLD
+	printk("Triggering on threshold:\n");
+	if (rc == 0) {
+		struct sensor_value thr = {
+			.val1 = CONFIG_APP_CO2_MEDIUM_PPM,
+		};
+		rc = sensor_attr_set(dev, SENSOR_CHAN_CO2,
+				     SENSOR_ATTR_LOWER_THRESH,
+				     &thr);
+		printk("L/M threshold to %d got %d\n", thr.val1, rc);
+	}
+	if (rc == 0) {
+		struct sensor_value thr = {
+			.val1 = CONFIG_APP_CO2_HIGH_PPM,
+		};
+		rc = sensor_attr_set(dev, SENSOR_CHAN_CO2,
+				     SENSOR_ATTR_UPPER_THRESH,
+				     &thr);
+		printk("M/H threshold to %d got %d\n", thr.val1, rc);
+	}
+	trig.type = SENSOR_TRIG_THRESHOLD;
+	trig.chan = SENSOR_CHAN_CO2;
+#elif defined(CONFIG_APP_TRIGGER_ON_DATAREADY)
+	printk("Triggering on data ready\n");
+	trig.type = SENSOR_TRIG_DATA_READY;
+	trig.chan = SENSOR_CHAN_ALL;
+#else
+#error Unhandled trigger on
+#endif
+	if (rc == 0) {
+		rc = sensor_trigger_set(dev, &trig, trigger_handler);
+	}
+	if (rc == 0) {
+#ifdef CONFIG_APP_TRIGGER_ON_DATAREADY
+		while (true) {
+			k_sleep(K_FOREVER);
+		}
+#endif
+	}
+	printk("Trigger installation got: %d\n", rc);
+#endif /* CONFIG_CCS811_TRIGGER */
+	if (rc == 0) {
+		do_main(dev);
+	}
+
+	
+
 }

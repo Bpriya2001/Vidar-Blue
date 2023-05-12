@@ -10,7 +10,7 @@ ELF Header:
   Version:                           0x1
   Entry point address:               0x4038b014
   Start of program headers:          52 (bytes into file)
-  Start of section headers:          4620292 (bytes into file)
+  Start of section headers:          4620364 (bytes into file)
   Flags:                             0x1, RVC, soft-float ABI
   Size of this header:               52 (bytes)
   Size of program headers:           32 (bytes)
@@ -25,57 +25,57 @@ Section Headers:
   [ 1] .mcuboot_header   PROGBITS        00000000 000174 000020 00   A  0   0  1
   [ 2] .metadata         PROGBITS        00000020 000194 00001c 00   A  0   0  1
   [ 3] .iram0.text       PROGBITS        40380000 007c00 00b2cc 00  AX  0   0 256
-  [ 4] .dram0.data       PROGBITS        3fc97a98 012ed0 0093a4 00  WA  0   0  8
-  [ 5] .dummy.dram.data  PROGBITS        3fca13c8 055476 000000 00   W  0   0  1
-  [ 6] rodata            PROGBITS        3c000040 0001b0 0077c8 00   A  0   0  8
-  [ 7] _RODATA_SECT[...] PROGBITS        3c0079f8 055476 000000 00   W  0   0  1
-  [ 8] initlevel         PROGBITS        3c007808 007978 000068 00   A  0   0  4
-  [ 9] devices           PROGBITS        3c007870 0079e0 000060 00   A  0   0  4
-  [10] _static_thre[...] PROGBITS        3c0078d0 007a40 000060 00  WA  0   0  4
-  [11] device_handles    PROGBITS        3c007930 007aa0 000020 00   A  0   0  2
-  [12] bt_l2cap_fix[...] PROGBITS        3c007950 007ac0 000024 00   A  0   0  4
-  [13] bt_gatt_serv[...] PROGBITS        3c007974 007ae4 000010 00   A  0   0  4
-  [14] shell_area        PROGBITS        3c007984 007af4 000030 00   A  0   0  4
-  [15] shell_root_c[...] PROGBITS        3c0079b4 007b24 000024 00   A  0   0  4
-  [16] shell_subcmd[...] PROGBITS        3c0079d8 007b48 000014 00   A  0   0  4
-  [17] shell_dynami[...] PROGBITS        3c0079ec 007b5c 00000c 00   A  0   0  4
+  [ 4] .dram0.data       PROGBITS        3fc97a88 012ed0 0093ac 00  WA  0   0  8
+  [ 5] .dummy.dram.data  PROGBITS        3fca13c0 05547a 000000 00   W  0   0  1
+  [ 6] rodata            PROGBITS        3c000040 0001b0 0077cc 00   A  0   0  8
+  [ 7] _RODATA_SECT[...] PROGBITS        3c0079fc 05547a 000000 00   W  0   0  1
+  [ 8] initlevel         PROGBITS        3c00780c 00797c 000068 00   A  0   0  4
+  [ 9] devices           PROGBITS        3c007874 0079e4 000060 00   A  0   0  4
+  [10] _static_thre[...] PROGBITS        3c0078d4 007a44 000060 00  WA  0   0  4
+  [11] device_handles    PROGBITS        3c007934 007aa4 000020 00   A  0   0  2
+  [12] bt_l2cap_fix[...] PROGBITS        3c007954 007ac4 000024 00   A  0   0  4
+  [13] bt_gatt_serv[...] PROGBITS        3c007978 007ae8 000010 00   A  0   0  4
+  [14] shell_area        PROGBITS        3c007988 007af8 000030 00   A  0   0  4
+  [15] shell_root_c[...] PROGBITS        3c0079b8 007b28 000024 00   A  0   0  4
+  [16] shell_subcmd[...] PROGBITS        3c0079dc 007b4c 000014 00   A  0   0  4
+  [17] shell_dynami[...] PROGBITS        3c0079f0 007b60 00000c 00   A  0   0  4
   [18] .dram0.dummy      NOBITS          3fc80000 055480 00b2d0 00  WA  0   0  1
-  [19] bss               NOBITS          3fc8b2d0 055480 001d80 00  WA  0   0  8
-  [20] noinit            NOBITS          3fc8d050 055480 00aa48 00  WA  0   0 16
-  [21] sw_isr_table      PROGBITS        3fca0e3c 01c274 0001f0 00  WA  0   0  4
-  [22] device_states     PROGBITS        3fca102c 01c464 000008 00  WA  0   0  1
-  [23] log_mpsc_pbu[...] PROGBITS        3fca1034 01c46c 000040 00  WA  0   0  4
-  [24] log_msg_ptr_area  PROGBITS        3fca1074 01c4ac 000004 00  WA  0   0  4
-  [25] log_dynamic_[...] PROGBITS        3fca1078 01c4b0 00006c 00  WA  0   0  4
-  [26] k_mem_slab_area   PROGBITS        3fca10e4 01c51c 000054 00  WA  0   0  4
-  [27] k_heap_area       PROGBITS        3fca1138 01c570 000014 00  WA  0   0  4
-  [28] k_mutex_area      PROGBITS        3fca114c 01c584 000014 00  WA  0   0  4
-  [29] k_sem_area        PROGBITS        3fca1160 01c598 000048 00  WA  0   0  4
-  [30] k_queue_area      PROGBITS        3fca11a8 01c5e0 000030 00  WA  0   0  4
-  [31] _net_buf_poo[...] PROGBITS        3fca11d8 01c610 000108 00  WA  0   0  4
-  [32] log_const_se[...] PROGBITS        3fca12e0 01c718 0000d8 00   A  0   0  4
-  [33] log_backend_area  PROGBITS        3fca13b8 01c7f0 000010 00   A  0   0  4
-  [34] .iram0.text_end   NOBITS          4038b2cc 055476 000004 00  WA  0   0  1
-  [35] .iram0.data       PROGBITS        4038b2d0 055476 000000 00   W  0   0  1
-  [36] .iram0.bss        PROGBITS        4038b2d0 055476 000000 00   W  0   0  1
-  [37] .flash.text       PROGBITS        42010020 01c800 038c76 00  AX  0   0  4
-  [38] .flash_text_dummy NOBITS          42000020 055478 010000 00  WA  0   0  4
-  [39] .rtc.text         PROGBITS        50000000 055476 000000 00   W  0   0  1
-  [40] .rtc.dummy        PROGBITS        50000000 055476 000000 00   W  0   0  1
-  [41] .rtc.force_slow   PROGBITS        50000000 055476 000000 00   W  0   0  1
-  [42] .comment          PROGBITS        00000000 055476 000051 01  MS  0   0  1
-  [43] .debug_aranges    PROGBITS        00000000 0554c8 004120 00      0   0  8
-  [44] .debug_info       PROGBITS        00000000 0595e8 21226d 00      0   0  1
-  [45] .debug_abbrev     PROGBITS        00000000 26b855 01e1e8 00      0   0  1
-  [46] .debug_line       PROGBITS        00000000 289a3d 0f04ee 00      0   0  1
-  [47] .debug_frame      PROGBITS        00000000 379f2c 00e38c 00      0   0  4
-  [48] .debug_str        PROGBITS        00000000 3882b8 01d114 01  MS  0   0  1
-  [49] .debug_loc        PROGBITS        00000000 3a53cc 078286 00      0   0  1
-  [50] .debug_ranges     PROGBITS        00000000 41d658 01b6e8 00      0   0  8
-  [51] .riscv.attributes RISCV_ATTRIBUTE 00000000 438d40 00003f 00      0   0  1
-  [52] .symtab           SYMTAB          00000000 438d80 017cc0 10     53 2528  4
-  [53] .strtab           STRTAB          00000000 450a40 0172b5 00      0   0  1
-  [54] .shstrtab         STRTAB          00000000 467cf5 00030d 00      0   0  1
+  [19] bss               NOBITS          3fc8b2d0 055480 001d70 00  WA  0   0  8
+  [20] noinit            NOBITS          3fc8d040 055480 00aa48 00  WA  0   0 16
+  [21] sw_isr_table      PROGBITS        3fca0e34 01c27c 0001f0 00  WA  0   0  4
+  [22] device_states     PROGBITS        3fca1024 01c46c 000008 00  WA  0   0  1
+  [23] log_mpsc_pbu[...] PROGBITS        3fca102c 01c474 000040 00  WA  0   0  4
+  [24] log_msg_ptr_area  PROGBITS        3fca106c 01c4b4 000004 00  WA  0   0  4
+  [25] log_dynamic_[...] PROGBITS        3fca1070 01c4b8 00006c 00  WA  0   0  4
+  [26] k_mem_slab_area   PROGBITS        3fca10dc 01c524 000054 00  WA  0   0  4
+  [27] k_heap_area       PROGBITS        3fca1130 01c578 000014 00  WA  0   0  4
+  [28] k_mutex_area      PROGBITS        3fca1144 01c58c 000014 00  WA  0   0  4
+  [29] k_sem_area        PROGBITS        3fca1158 01c5a0 000048 00  WA  0   0  4
+  [30] k_queue_area      PROGBITS        3fca11a0 01c5e8 000030 00  WA  0   0  4
+  [31] _net_buf_poo[...] PROGBITS        3fca11d0 01c618 000108 00  WA  0   0  4
+  [32] log_const_se[...] PROGBITS        3fca12d8 01c720 0000d8 00   A  0   0  4
+  [33] log_backend_area  PROGBITS        3fca13b0 01c7f8 000010 00   A  0   0  4
+  [34] .iram0.text_end   NOBITS          4038b2cc 05547a 000004 00  WA  0   0  1
+  [35] .iram0.data       PROGBITS        4038b2d0 05547a 000000 00   W  0   0  1
+  [36] .iram0.bss        PROGBITS        4038b2d0 05547a 000000 00   W  0   0  1
+  [37] .flash.text       PROGBITS        42010020 01c808 038c72 00  AX  0   0  4
+  [38] .flash_text_dummy NOBITS          42000020 05547c 010000 00  WA  0   0  4
+  [39] .rtc.text         PROGBITS        50000000 05547a 000000 00   W  0   0  1
+  [40] .rtc.dummy        PROGBITS        50000000 05547a 000000 00   W  0   0  1
+  [41] .rtc.force_slow   PROGBITS        50000000 05547a 000000 00   W  0   0  1
+  [42] .comment          PROGBITS        00000000 05547a 000051 01  MS  0   0  1
+  [43] .debug_aranges    PROGBITS        00000000 0554d0 004120 00      0   0  8
+  [44] .debug_info       PROGBITS        00000000 0595f0 212289 00      0   0  1
+  [45] .debug_abbrev     PROGBITS        00000000 26b879 01e20c 00      0   0  1
+  [46] .debug_line       PROGBITS        00000000 289a85 0f04fa 00      0   0  1
+  [47] .debug_frame      PROGBITS        00000000 379f80 00e38c 00      0   0  4
+  [48] .debug_str        PROGBITS        00000000 38830c 01d114 01  MS  0   0  1
+  [49] .debug_loc        PROGBITS        00000000 3a5420 078286 00      0   0  1
+  [50] .debug_ranges     PROGBITS        00000000 41d6a8 01b6e8 00      0   0  8
+  [51] .riscv.attributes RISCV_ATTRIBUTE 00000000 438d90 00003f 00      0   0  1
+  [52] .symtab           SYMTAB          00000000 438dd0 017cc0 10     53 2528  4
+  [53] .strtab           STRTAB          00000000 450a90 0172ac 00      0   0  1
+  [54] .shstrtab         STRTAB          00000000 467d3c 00030d 00      0   0  1
 Key to Flags:
   W (write), A (alloc), X (execute), M (merge), S (strings), I (info),
   L (link order), O (extra OS processing required), G (group), T (TLS),
@@ -84,14 +84,14 @@ Key to Flags:
 
 Program Headers:
   Type           Offset   VirtAddr   PhysAddr   FileSiz MemSiz  Flg Align
-  RISCV_ATTRIBUT 0x438d40 0x00000000 0x00000000 0x0003f 0x00000 R   0x1
+  RISCV_ATTRIBUT 0x438d90 0x00000000 0x00000000 0x0003f 0x00000 R   0x1
   LOAD           0x000174 0x00000000 0x00000000 0x00020 0x00020 R   0x1
   LOAD           0x000194 0x00000020 0x00000020 0x0001c 0x0001c R   0x1
-  LOAD           0x0001b0 0x3c000040 0x00000040 0x079b8 0x079b8 RW  0x8
-  LOAD           0x007c00 0x40380000 0x000079f8 0x0b2cc 0x0b2cc R E 0x100
-  LOAD           0x012ed0 0x3fc97a98 0x00012cc4 0x09930 0x09930 RW  0x8
-  LOAD           0x01c800 0x42010020 0x0001c5f4 0x38c76 0x38c76 R E 0x4
-  LOAD           0x000000 0x3fc80000 0x3fc80000 0x00000 0x17a98 RW  0x10
+  LOAD           0x0001b0 0x3c000040 0x00000040 0x079bc 0x079bc RW  0x8
+  LOAD           0x007c00 0x40380000 0x000079fc 0x0b2cc 0x0b2cc R E 0x100
+  LOAD           0x012ed0 0x3fc97a88 0x00012cc8 0x09938 0x09938 RW  0x8
+  LOAD           0x01c808 0x42010020 0x0001c600 0x38c72 0x38c72 R E 0x4
+  LOAD           0x000000 0x3fc80000 0x3fc80000 0x00000 0x17a88 RW  0x10
   LOAD           0x000000 0x4038b2cc 0x4038b2cc 0x00000 0x00004 RW  0x1
   LOAD           0x000000 0x42000020 0x42000020 0x00000 0x10000 RW  0x4
 

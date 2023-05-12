@@ -6,4 +6,8 @@ find_package(Zephyr REQUIRED HINTS $ENV{ZEPHYR_BASE})
 project(hello_world)
 
 FILE(GLOB app_sources src/*.c)
-target_sources(app PRIVATE src/main.c)
+target_sources(app PRIVATE 
+    src/main.c
+    src/ble.c)
+
+zephyr_library_include_directories(${ZEPHYR_BASE}/samples/bluetooth)
