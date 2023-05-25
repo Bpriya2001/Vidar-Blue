@@ -1,0 +1,501 @@
+
+---
+events:
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/home/user/.local/lib/python3.9/site-packages/cmake/data/share/cmake-3.26/Modules/CMakeDetermineSystem.cmake:199 (message)"
+      - "/home/user/csse4011/zephyrproject/modules/hal/espressif/tools/cmake/project.cmake:290 (__project)"
+      - "CMakeLists.txt:59 (project)"
+    message: |
+      The target system is: Generic -  - 
+      The host system is: Linux - 5.10.0-21-amd64 - x86_64
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/home/user/.local/lib/python3.9/site-packages/cmake/data/share/cmake-3.26/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/home/user/.local/lib/python3.9/site-packages/cmake/data/share/cmake-3.26/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/home/user/.local/lib/python3.9/site-packages/cmake/data/share/cmake-3.26/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "/home/user/csse4011/zephyrproject/modules/hal/espressif/tools/cmake/project.cmake:290 (__project)"
+      - "CMakeLists.txt:59 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+      Compiler: /home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/bin/riscv64-zephyr-elf-gcc 
+      Build flags: -march=rv32imc_zicsr_zifencei
+      Id flags:  
+      
+      The output was:
+      0
+      
+      
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.out"
+      
+      The C compiler identification is GNU, found in:
+        /home/user/csse4011/Vidar-Blue/ESP_GPIO_TEST/scu/build/esp-idf/build/bootloader/CMakeFiles/3.26.3/CompilerIdC/a.out
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/home/user/.local/lib/python3.9/site-packages/cmake/data/share/cmake-3.26/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/home/user/.local/lib/python3.9/site-packages/cmake/data/share/cmake-3.26/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/home/user/.local/lib/python3.9/site-packages/cmake/data/share/cmake-3.26/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "/home/user/csse4011/zephyrproject/modules/hal/espressif/tools/cmake/project.cmake:290 (__project)"
+      - "CMakeLists.txt:59 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+      Compiler: /home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/bin/riscv64-zephyr-elf-g++ 
+      Build flags: -march=rv32imc_zicsr_zifencei
+      Id flags:  
+      
+      The output was:
+      0
+      
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.out"
+      
+      The CXX compiler identification is GNU, found in:
+        /home/user/csse4011/Vidar-Blue/ESP_GPIO_TEST/scu/build/esp-idf/build/bootloader/CMakeFiles/3.26.3/CompilerIdCXX/a.out
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/home/user/.local/lib/python3.9/site-packages/cmake/data/share/cmake-3.26/Modules/CMakeDetermineCompilerId.cmake:1102 (message)"
+      - "/home/user/.local/lib/python3.9/site-packages/cmake/data/share/cmake-3.26/Modules/CMakeDetermineASMCompiler.cmake:127 (CMAKE_DETERMINE_COMPILER_ID_VENDOR)"
+      - "/home/user/csse4011/zephyrproject/modules/hal/espressif/tools/cmake/project.cmake:290 (__project)"
+      - "CMakeLists.txt:59 (project)"
+    message: |
+      Checking whether the ASM compiler is GNU using "--version" matched "(GNU assembler)|(GCC)|(Free Software Foundation)":
+      riscv64-zephyr-elf-gcc (Zephyr SDK 0.15.2) 12.1.0
+      Copyright (C) 2022 Free Software Foundation, Inc.
+      This is free software; see the source for copying conditions.  There is NO
+      warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/home/user/.local/lib/python3.9/site-packages/cmake/data/share/cmake-3.26/Modules/CMakeDetermineCompilerABI.cmake:57 (try_compile)"
+      - "/home/user/.local/lib/python3.9/site-packages/cmake/data/share/cmake-3.26/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "/home/user/csse4011/zephyrproject/modules/hal/espressif/tools/cmake/project.cmake:290 (__project)"
+      - "CMakeLists.txt:59 (project)"
+    checks:
+      - "Detecting C compiler ABI info"
+    directories:
+      source: "/home/user/csse4011/Vidar-Blue/ESP_GPIO_TEST/scu/build/esp-idf/build/bootloader/CMakeFiles/CMakeScratch/TryCompile-mNUazz"
+      binary: "/home/user/csse4011/Vidar-Blue/ESP_GPIO_TEST/scu/build/esp-idf/build/bootloader/CMakeFiles/CMakeScratch/TryCompile-mNUazz"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "-march=rv32imc_zicsr_zifencei"
+      CMAKE_EXE_LINKER_FLAGS: "-nostartfiles -march=rv32imc_zicsr_zifencei --specs=nosys.specs"
+      CMAKE_MODULE_PATH: "/home/user/csse4011/zephyrproject/modules/hal/espressif/tools/cmake;/home/user/csse4011/zephyrproject/modules/hal/espressif/tools/cmake/third_party"
+    buildResult:
+      variable: "CMAKE_C_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: /home/user/csse4011/Vidar-Blue/ESP_GPIO_TEST/scu/build/esp-idf/build/bootloader/CMakeFiles/CMakeScratch/TryCompile-mNUazz
+        
+        Run Build Command(s):/usr/bin/ninja -v cmTC_87d50 && [1/2] /home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/bin/riscv64-zephyr-elf-gcc   -march=rv32imc_zicsr_zifencei    -v -o CMakeFiles/cmTC_87d50.dir/CMakeCCompilerABI.c.obj -c /home/user/.local/lib/python3.9/site-packages/cmake/data/share/cmake-3.26/Modules/CMakeCCompilerABI.c
+        Using built-in specs.
+        COLLECT_GCC=/home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/bin/riscv64-zephyr-elf-gcc
+        Target: riscv64-zephyr-elf
+        Configured with: /__w/_temp/workspace/build/.build/riscv64-zephyr-elf/src/gcc/configure --build=x86_64-build_pc-linux-gnu --host=x86_64-build_pc-linux-gnu --target=riscv64-zephyr-elf --prefix=/__w/_temp/workspace/output/riscv64-zephyr-elf --exec_prefix=/__w/_temp/workspace/output/riscv64-zephyr-elf --with-local-prefix=/__w/_temp/workspace/output/riscv64-zephyr-elf/riscv64-zephyr-elf --with-headers=/__w/_temp/workspace/output/riscv64-zephyr-elf/riscv64-zephyr-elf/include --with-newlib --enable-threads=no --disable-shared --with-arch=rv32ima_zicsr_zifencei --with-abi=ilp32 --with-pkgversion='Zephyr SDK 0.15.2' --with-bugurl=https://github.com/zephyrproject-rtos/sdk-ng/issues --enable-__cxa_atexit --disable-libgomp --disable-libmudflap --disable-libmpx --disable-libssp --disable-libquadmath --disable-libquadmath-support --disable-libstdcxx-verbose --with-gmp=/__w/_temp/workspace/build/.build/riscv64-zephyr-elf/buildtools --with-mpfr=/__w/_temp/workspace/build/.build/riscv64-zephyr-elf/buildtools --with-mpc=/__w/_temp/workspace/build/.build/riscv64-zephyr-elf/buildtools --with-isl=/__w/_temp/workspace/build/.build/riscv64-zephyr-elf/buildtools --enable-lto --enable-target-optspace --disable-nls --enable-multiarch --enable-languages=c,c++ --with-gnu-ld --with-gnu-as --enable-initfini-array
+        Thread model: single
+        Supported LTO compression algorithms: zlib
+        gcc version 12.1.0 (Zephyr SDK 0.15.2) 
+        COLLECT_GCC_OPTIONS='-march=rv32imc_zicsr_zifencei' '-v' '-o' 'CMakeFiles/cmTC_87d50.dir/CMakeCCompilerABI.c.obj' '-c' '-mabi=ilp32' '-misa-spec=20191213' '-march=rv32imc_zicsr_zifencei' '-dumpdir' 'CMakeFiles/cmTC_87d50.dir/'
+         /home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/bin/../libexec/gcc/riscv64-zephyr-elf/12.1.0/cc1 -quiet -v -imultilib rv32im_zicsr_zifencei/ilp32 -iprefix /home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/bin/../lib/gcc/riscv64-zephyr-elf/12.1.0/ /home/user/.local/lib/python3.9/site-packages/cmake/data/share/cmake-3.26/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_87d50.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -march=rv32imc_zicsr_zifencei -mabi=ilp32 -misa-spec=20191213 -march=rv32imc_zicsr_zifencei -version -o /tmp/ccZZTONX.s
+        GNU C17 (Zephyr SDK 0.15.2) version 12.1.0 (riscv64-zephyr-elf)
+        	compiled by GNU C version 7.5.0, GMP version 6.2.1, MPFR version 4.1.0, MPC version 1.2.1, isl version isl-0.24-GMP
+        
+        GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+        ignoring duplicate directory "/home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/bin/../lib/gcc/../../lib/gcc/riscv64-zephyr-elf/12.1.0/include"
+        ignoring duplicate directory "/home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/bin/../lib/gcc/../../lib/gcc/riscv64-zephyr-elf/12.1.0/include-fixed"
+        ignoring duplicate directory "/home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/bin/../lib/gcc/../../lib/gcc/riscv64-zephyr-elf/12.1.0/../../../../riscv64-zephyr-elf/sys-include"
+        ignoring duplicate directory "/home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/bin/../lib/gcc/../../lib/gcc/riscv64-zephyr-elf/12.1.0/../../../../riscv64-zephyr-elf/include"
+        #include "..." search starts here:
+        #include <...> search starts here:
+         /home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/bin/../lib/gcc/riscv64-zephyr-elf/12.1.0/include
+         /home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/bin/../lib/gcc/riscv64-zephyr-elf/12.1.0/include-fixed
+         /home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/bin/../lib/gcc/riscv64-zephyr-elf/12.1.0/../../../../riscv64-zephyr-elf/sys-include
+         /home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/bin/../lib/gcc/riscv64-zephyr-elf/12.1.0/../../../../riscv64-zephyr-elf/include
+        End of search list.
+        GNU C17 (Zephyr SDK 0.15.2) version 12.1.0 (riscv64-zephyr-elf)
+        	compiled by GNU C version 7.5.0, GMP version 6.2.1, MPFR version 4.1.0, MPC version 1.2.1, isl version isl-0.24-GMP
+        
+        GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+        Compiler executable checksum: 9521b23b193187f9f7568ff5203a4ec1
+        COLLECT_GCC_OPTIONS='-march=rv32imc_zicsr_zifencei' '-v' '-o' 'CMakeFiles/cmTC_87d50.dir/CMakeCCompilerABI.c.obj' '-c' '-mabi=ilp32' '-misa-spec=20191213' '-march=rv32imc_zicsr_zifencei' '-dumpdir' 'CMakeFiles/cmTC_87d50.dir/'
+         /home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/bin/../lib/gcc/riscv64-zephyr-elf/12.1.0/../../../../riscv64-zephyr-elf/bin/as -v --traditional-format -march=rv32imc_zicsr_zifencei -march=rv32imc_zicsr_zifencei -mabi=ilp32 -misa-spec=20191213 -o CMakeFiles/cmTC_87d50.dir/CMakeCCompilerABI.c.obj /tmp/ccZZTONX.s
+        GNU assembler version 2.38 (riscv64-zephyr-elf) using BFD version (Zephyr SDK 0.15.2) 2.38
+        COMPILER_PATH=/home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/bin/../libexec/gcc/riscv64-zephyr-elf/12.1.0/:/home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/bin/../libexec/gcc/:/home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/bin/../lib/gcc/riscv64-zephyr-elf/12.1.0/../../../../riscv64-zephyr-elf/bin/
+        LIBRARY_PATH=/home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/bin/../lib/gcc/riscv64-zephyr-elf/12.1.0/rv32im_zicsr_zifencei/ilp32/:/home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/bin/../lib/gcc/riscv64-zephyr-elf/12.1.0/../../../../riscv64-zephyr-elf/lib/rv32im_zicsr_zifencei/ilp32/:/home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/bin/../lib/gcc/riscv64-zephyr-elf/12.1.0/:/home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/bin/../lib/gcc/:/home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/bin/../lib/gcc/riscv64-zephyr-elf/12.1.0/../../../../riscv64-zephyr-elf/lib/
+        COLLECT_GCC_OPTIONS='-march=rv32imc_zicsr_zifencei' '-v' '-o' 'CMakeFiles/cmTC_87d50.dir/CMakeCCompilerABI.c.obj' '-c' '-mabi=ilp32' '-misa-spec=20191213' '-march=rv32imc_zicsr_zifencei' '-dumpdir' 'CMakeFiles/cmTC_87d50.dir/CMakeCCompilerABI.c.'
+        [2/2] : && /home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/bin/riscv64-zephyr-elf-gcc -march=rv32imc_zicsr_zifencei -nostartfiles -march=rv32imc_zicsr_zifencei --specs=nosys.specs -v CMakeFiles/cmTC_87d50.dir/CMakeCCompilerABI.c.obj -o cmTC_87d50   && :
+        Using built-in specs.
+        Reading specs from /home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/bin/../lib/gcc/riscv64-zephyr-elf/12.1.0/../../../../riscv64-zephyr-elf/lib/nosys.specs
+        rename spec link_gcc_c_sequence to nosys_link_gcc_c_sequence
+        COLLECT_GCC=/home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/bin/riscv64-zephyr-elf-gcc
+        COLLECT_LTO_WRAPPER=/home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/bin/../libexec/gcc/riscv64-zephyr-elf/12.1.0/lto-wrapper
+        Target: riscv64-zephyr-elf
+        Configured with: /__w/_temp/workspace/build/.build/riscv64-zephyr-elf/src/gcc/configure --build=x86_64-build_pc-linux-gnu --host=x86_64-build_pc-linux-gnu --target=riscv64-zephyr-elf --prefix=/__w/_temp/workspace/output/riscv64-zephyr-elf --exec_prefix=/__w/_temp/workspace/output/riscv64-zephyr-elf --with-local-prefix=/__w/_temp/workspace/output/riscv64-zephyr-elf/riscv64-zephyr-elf --with-headers=/__w/_temp/workspace/output/riscv64-zephyr-elf/riscv64-zephyr-elf/include --with-newlib --enable-threads=no --disable-shared --with-arch=rv32ima_zicsr_zifencei --with-abi=ilp32 --with-pkgversion='Zephyr SDK 0.15.2' --with-bugurl=https://github.com/zephyrproject-rtos/sdk-ng/issues --enable-__cxa_atexit --disable-libgomp --disable-libmudflap --disable-libmpx --disable-libssp --disable-libquadmath --disable-libquadmath-support --disable-libstdcxx-verbose --with-gmp=/__w/_temp/workspace/build/.build/riscv64-zephyr-elf/buildtools --with-mpfr=/__w/_temp/workspace/build/.build/riscv64-zephyr-elf/buildtools --with-mpc=/__w/_temp/workspace/build/.build/riscv64-zephyr-elf/buildtools --with-isl=/__w/_temp/workspace/build/.build/riscv64-zephyr-elf/buildtools --enable-lto --enable-target-optspace --disable-nls --enable-multiarch --enable-languages=c,c++ --with-gnu-ld --with-gnu-as --enable-initfini-array
+        Thread model: single
+        Supported LTO compression algorithms: zlib
+        gcc version 12.1.0 (Zephyr SDK 0.15.2) 
+        COMPILER_PATH=/home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/bin/../libexec/gcc/riscv64-zephyr-elf/12.1.0/:/home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/bin/../libexec/gcc/:/home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/bin/../lib/gcc/riscv64-zephyr-elf/12.1.0/../../../../riscv64-zephyr-elf/bin/
+        LIBRARY_PATH=/home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/bin/../lib/gcc/riscv64-zephyr-elf/12.1.0/rv32im_zicsr_zifencei/ilp32/:/home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/bin/../lib/gcc/riscv64-zephyr-elf/12.1.0/../../../../riscv64-zephyr-elf/lib/rv32im_zicsr_zifencei/ilp32/:/home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/bin/../lib/gcc/riscv64-zephyr-elf/12.1.0/:/home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/bin/../lib/gcc/:/home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/bin/../lib/gcc/riscv64-zephyr-elf/12.1.0/../../../../riscv64-zephyr-elf/lib/
+        COLLECT_GCC_OPTIONS='-nostartfiles' '-march=rv32imc_zicsr_zifencei' '-specs=nosys.specs' '-v' '-o' 'cmTC_87d50' '-mabi=ilp32' '-misa-spec=20191213' '-march=rv32imc_zicsr_zifencei' '-dumpdir' 'cmTC_87d50.'
+         /home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/bin/../libexec/gcc/riscv64-zephyr-elf/12.1.0/collect2 -plugin /home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/bin/../libexec/gcc/riscv64-zephyr-elf/12.1.0/liblto_plugin.so -plugin-opt=/home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/bin/../libexec/gcc/riscv64-zephyr-elf/12.1.0/lto-wrapper -plugin-opt=-fresolution=/tmp/cccZ3W7f.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lnosys -melf32lriscv -o cmTC_87d50 -L/home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/bin/../lib/gcc/riscv64-zephyr-elf/12.1.0/rv32im_zicsr_zifencei/ilp32 -L/home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/bin/../lib/gcc/riscv64-zephyr-elf/12.1.0/../../../../riscv64-zephyr-elf/lib/rv32im_zicsr_zifencei/ilp32 -L/home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/bin/../lib/gcc/riscv64-zephyr-elf/12.1.0 -L/home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/bin/../lib/gcc -L/home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/bin/../lib/gcc/riscv64-zephyr-elf/12.1.0/../../../../riscv64-zephyr-elf/lib CMakeFiles/cmTC_87d50.dir/CMakeCCompilerABI.c.obj -lgcc --start-group -lc --end-group -lgcc --start-group -lgcc -lc -lnosys --end-group
+        /home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/bin/../lib/gcc/riscv64-zephyr-elf/12.1.0/../../../../riscv64-zephyr-elf/bin/ld: warning: cannot find entry symbol _start; defaulting to 0000000000010074
+        COLLECT_GCC_OPTIONS='-nostartfiles' '-march=rv32imc_zicsr_zifencei' '-specs=nosys.specs' '-v' '-o' 'cmTC_87d50' '-mabi=ilp32' '-misa-spec=20191213' '-march=rv32imc_zicsr_zifencei' '-dumpdir' 'cmTC_87d50.'
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/home/user/.local/lib/python3.9/site-packages/cmake/data/share/cmake-3.26/Modules/CMakeDetermineCompilerABI.cmake:127 (message)"
+      - "/home/user/.local/lib/python3.9/site-packages/cmake/data/share/cmake-3.26/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "/home/user/csse4011/zephyrproject/modules/hal/espressif/tools/cmake/project.cmake:290 (__project)"
+      - "CMakeLists.txt:59 (project)"
+    message: |
+      Parsed C implicit include dir info: rv=done
+        found start of include info
+        found start of implicit include info
+          add: [/home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/bin/../lib/gcc/riscv64-zephyr-elf/12.1.0/include]
+          add: [/home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/bin/../lib/gcc/riscv64-zephyr-elf/12.1.0/include-fixed]
+          add: [/home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/bin/../lib/gcc/riscv64-zephyr-elf/12.1.0/../../../../riscv64-zephyr-elf/sys-include]
+          add: [/home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/bin/../lib/gcc/riscv64-zephyr-elf/12.1.0/../../../../riscv64-zephyr-elf/include]
+        end of search list found
+        collapse include dir [/home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/bin/../lib/gcc/riscv64-zephyr-elf/12.1.0/include] ==> [/home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/lib/gcc/riscv64-zephyr-elf/12.1.0/include]
+        collapse include dir [/home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/bin/../lib/gcc/riscv64-zephyr-elf/12.1.0/include-fixed] ==> [/home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/lib/gcc/riscv64-zephyr-elf/12.1.0/include-fixed]
+        collapse include dir [/home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/bin/../lib/gcc/riscv64-zephyr-elf/12.1.0/../../../../riscv64-zephyr-elf/sys-include] ==> [/home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/riscv64-zephyr-elf/sys-include]
+        collapse include dir [/home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/bin/../lib/gcc/riscv64-zephyr-elf/12.1.0/../../../../riscv64-zephyr-elf/include] ==> [/home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/riscv64-zephyr-elf/include]
+        implicit include dirs: [/home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/lib/gcc/riscv64-zephyr-elf/12.1.0/include;/home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/lib/gcc/riscv64-zephyr-elf/12.1.0/include-fixed;/home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/riscv64-zephyr-elf/sys-include;/home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/riscv64-zephyr-elf/include]
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/home/user/.local/lib/python3.9/site-packages/cmake/data/share/cmake-3.26/Modules/CMakeDetermineCompilerABI.cmake:152 (message)"
+      - "/home/user/.local/lib/python3.9/site-packages/cmake/data/share/cmake-3.26/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "/home/user/csse4011/zephyrproject/modules/hal/espressif/tools/cmake/project.cmake:290 (__project)"
+      - "CMakeLists.txt:59 (project)"
+    message: |
+      Parsed C implicit link information:
+        link line regex: [^( *|.*[/\\])(riscv64-zephyr-elf-ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        ignore line: [Change Dir: /home/user/csse4011/Vidar-Blue/ESP_GPIO_TEST/scu/build/esp-idf/build/bootloader/CMakeFiles/CMakeScratch/TryCompile-mNUazz]
+        ignore line: []
+        ignore line: [Run Build Command(s):/usr/bin/ninja -v cmTC_87d50 && [1/2] /home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/bin/riscv64-zephyr-elf-gcc   -march=rv32imc_zicsr_zifencei    -v -o CMakeFiles/cmTC_87d50.dir/CMakeCCompilerABI.c.obj -c /home/user/.local/lib/python3.9/site-packages/cmake/data/share/cmake-3.26/Modules/CMakeCCompilerABI.c]
+        ignore line: [Using built-in specs.]
+        ignore line: [COLLECT_GCC=/home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/bin/riscv64-zephyr-elf-gcc]
+        ignore line: [Target: riscv64-zephyr-elf]
+        ignore line: [Configured with: /__w/_temp/workspace/build/.build/riscv64-zephyr-elf/src/gcc/configure --build=x86_64-build_pc-linux-gnu --host=x86_64-build_pc-linux-gnu --target=riscv64-zephyr-elf --prefix=/__w/_temp/workspace/output/riscv64-zephyr-elf --exec_prefix=/__w/_temp/workspace/output/riscv64-zephyr-elf --with-local-prefix=/__w/_temp/workspace/output/riscv64-zephyr-elf/riscv64-zephyr-elf --with-headers=/__w/_temp/workspace/output/riscv64-zephyr-elf/riscv64-zephyr-elf/include --with-newlib --enable-threads=no --disable-shared --with-arch=rv32ima_zicsr_zifencei --with-abi=ilp32 --with-pkgversion='Zephyr SDK 0.15.2' --with-bugurl=https://github.com/zephyrproject-rtos/sdk-ng/issues --enable-__cxa_atexit --disable-libgomp --disable-libmudflap --disable-libmpx --disable-libssp --disable-libquadmath --disable-libquadmath-support --disable-libstdcxx-verbose --with-gmp=/__w/_temp/workspace/build/.build/riscv64-zephyr-elf/buildtools --with-mpfr=/__w/_temp/workspace/build/.build/riscv64-zephyr-elf/buildtools --with-mpc=/__w/_temp/workspace/build/.build/riscv64-zephyr-elf/buildtools --with-isl=/__w/_temp/workspace/build/.build/riscv64-zephyr-elf/buildtools --enable-lto --enable-target-optspace --disable-nls --enable-multiarch --enable-languages=c,c++ --with-gnu-ld --with-gnu-as --enable-initfini-array]
+        ignore line: [Thread model: single]
+        ignore line: [Supported LTO compression algorithms: zlib]
+        ignore line: [gcc version 12.1.0 (Zephyr SDK 0.15.2) ]
+        ignore line: [COLLECT_GCC_OPTIONS='-march=rv32imc_zicsr_zifencei' '-v' '-o' 'CMakeFiles/cmTC_87d50.dir/CMakeCCompilerABI.c.obj' '-c' '-mabi=ilp32' '-misa-spec=20191213' '-march=rv32imc_zicsr_zifencei' '-dumpdir' 'CMakeFiles/cmTC_87d50.dir/']
+        ignore line: [ /home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/bin/../libexec/gcc/riscv64-zephyr-elf/12.1.0/cc1 -quiet -v -imultilib rv32im_zicsr_zifencei/ilp32 -iprefix /home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/bin/../lib/gcc/riscv64-zephyr-elf/12.1.0/ /home/user/.local/lib/python3.9/site-packages/cmake/data/share/cmake-3.26/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_87d50.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -march=rv32imc_zicsr_zifencei -mabi=ilp32 -misa-spec=20191213 -march=rv32imc_zicsr_zifencei -version -o /tmp/ccZZTONX.s]
+        ignore line: [GNU C17 (Zephyr SDK 0.15.2) version 12.1.0 (riscv64-zephyr-elf)]
+        ignore line: [	compiled by GNU C version 7.5.0  GMP version 6.2.1  MPFR version 4.1.0  MPC version 1.2.1  isl version isl-0.24-GMP]
+        ignore line: []
+        ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+        ignore line: [ignoring duplicate directory "/home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/bin/../lib/gcc/../../lib/gcc/riscv64-zephyr-elf/12.1.0/include"]
+        ignore line: [ignoring duplicate directory "/home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/bin/../lib/gcc/../../lib/gcc/riscv64-zephyr-elf/12.1.0/include-fixed"]
+        ignore line: [ignoring duplicate directory "/home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/bin/../lib/gcc/../../lib/gcc/riscv64-zephyr-elf/12.1.0/../../../../riscv64-zephyr-elf/sys-include"]
+        ignore line: [ignoring duplicate directory "/home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/bin/../lib/gcc/../../lib/gcc/riscv64-zephyr-elf/12.1.0/../../../../riscv64-zephyr-elf/include"]
+        ignore line: [#include "..." search starts here:]
+        ignore line: [#include <...> search starts here:]
+        ignore line: [ /home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/bin/../lib/gcc/riscv64-zephyr-elf/12.1.0/include]
+        ignore line: [ /home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/bin/../lib/gcc/riscv64-zephyr-elf/12.1.0/include-fixed]
+        ignore line: [ /home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/bin/../lib/gcc/riscv64-zephyr-elf/12.1.0/../../../../riscv64-zephyr-elf/sys-include]
+        ignore line: [ /home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/bin/../lib/gcc/riscv64-zephyr-elf/12.1.0/../../../../riscv64-zephyr-elf/include]
+        ignore line: [End of search list.]
+        ignore line: [GNU C17 (Zephyr SDK 0.15.2) version 12.1.0 (riscv64-zephyr-elf)]
+        ignore line: [	compiled by GNU C version 7.5.0  GMP version 6.2.1  MPFR version 4.1.0  MPC version 1.2.1  isl version isl-0.24-GMP]
+        ignore line: []
+        ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+        ignore line: [Compiler executable checksum: 9521b23b193187f9f7568ff5203a4ec1]
+        ignore line: [COLLECT_GCC_OPTIONS='-march=rv32imc_zicsr_zifencei' '-v' '-o' 'CMakeFiles/cmTC_87d50.dir/CMakeCCompilerABI.c.obj' '-c' '-mabi=ilp32' '-misa-spec=20191213' '-march=rv32imc_zicsr_zifencei' '-dumpdir' 'CMakeFiles/cmTC_87d50.dir/']
+        ignore line: [ /home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/bin/../lib/gcc/riscv64-zephyr-elf/12.1.0/../../../../riscv64-zephyr-elf/bin/as -v --traditional-format -march=rv32imc_zicsr_zifencei -march=rv32imc_zicsr_zifencei -mabi=ilp32 -misa-spec=20191213 -o CMakeFiles/cmTC_87d50.dir/CMakeCCompilerABI.c.obj /tmp/ccZZTONX.s]
+        ignore line: [GNU assembler version 2.38 (riscv64-zephyr-elf) using BFD version (Zephyr SDK 0.15.2) 2.38]
+        ignore line: [COMPILER_PATH=/home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/bin/../libexec/gcc/riscv64-zephyr-elf/12.1.0/:/home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/bin/../libexec/gcc/:/home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/bin/../lib/gcc/riscv64-zephyr-elf/12.1.0/../../../../riscv64-zephyr-elf/bin/]
+        ignore line: [LIBRARY_PATH=/home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/bin/../lib/gcc/riscv64-zephyr-elf/12.1.0/rv32im_zicsr_zifencei/ilp32/:/home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/bin/../lib/gcc/riscv64-zephyr-elf/12.1.0/../../../../riscv64-zephyr-elf/lib/rv32im_zicsr_zifencei/ilp32/:/home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/bin/../lib/gcc/riscv64-zephyr-elf/12.1.0/:/home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/bin/../lib/gcc/:/home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/bin/../lib/gcc/riscv64-zephyr-elf/12.1.0/../../../../riscv64-zephyr-elf/lib/]
+        ignore line: [COLLECT_GCC_OPTIONS='-march=rv32imc_zicsr_zifencei' '-v' '-o' 'CMakeFiles/cmTC_87d50.dir/CMakeCCompilerABI.c.obj' '-c' '-mabi=ilp32' '-misa-spec=20191213' '-march=rv32imc_zicsr_zifencei' '-dumpdir' 'CMakeFiles/cmTC_87d50.dir/CMakeCCompilerABI.c.']
+        ignore line: [[2/2] : && /home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/bin/riscv64-zephyr-elf-gcc -march=rv32imc_zicsr_zifencei -nostartfiles -march=rv32imc_zicsr_zifencei --specs=nosys.specs -v CMakeFiles/cmTC_87d50.dir/CMakeCCompilerABI.c.obj -o cmTC_87d50   && :]
+        ignore line: [Using built-in specs.]
+        ignore line: [Reading specs from /home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/bin/../lib/gcc/riscv64-zephyr-elf/12.1.0/../../../../riscv64-zephyr-elf/lib/nosys.specs]
+        ignore line: [rename spec link_gcc_c_sequence to nosys_link_gcc_c_sequence]
+        ignore line: [COLLECT_GCC=/home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/bin/riscv64-zephyr-elf-gcc]
+        ignore line: [COLLECT_LTO_WRAPPER=/home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/bin/../libexec/gcc/riscv64-zephyr-elf/12.1.0/lto-wrapper]
+        ignore line: [Target: riscv64-zephyr-elf]
+        ignore line: [Configured with: /__w/_temp/workspace/build/.build/riscv64-zephyr-elf/src/gcc/configure --build=x86_64-build_pc-linux-gnu --host=x86_64-build_pc-linux-gnu --target=riscv64-zephyr-elf --prefix=/__w/_temp/workspace/output/riscv64-zephyr-elf --exec_prefix=/__w/_temp/workspace/output/riscv64-zephyr-elf --with-local-prefix=/__w/_temp/workspace/output/riscv64-zephyr-elf/riscv64-zephyr-elf --with-headers=/__w/_temp/workspace/output/riscv64-zephyr-elf/riscv64-zephyr-elf/include --with-newlib --enable-threads=no --disable-shared --with-arch=rv32ima_zicsr_zifencei --with-abi=ilp32 --with-pkgversion='Zephyr SDK 0.15.2' --with-bugurl=https://github.com/zephyrproject-rtos/sdk-ng/issues --enable-__cxa_atexit --disable-libgomp --disable-libmudflap --disable-libmpx --disable-libssp --disable-libquadmath --disable-libquadmath-support --disable-libstdcxx-verbose --with-gmp=/__w/_temp/workspace/build/.build/riscv64-zephyr-elf/buildtools --with-mpfr=/__w/_temp/workspace/build/.build/riscv64-zephyr-elf/buildtools --with-mpc=/__w/_temp/workspace/build/.build/riscv64-zephyr-elf/buildtools --with-isl=/__w/_temp/workspace/build/.build/riscv64-zephyr-elf/buildtools --enable-lto --enable-target-optspace --disable-nls --enable-multiarch --enable-languages=c,c++ --with-gnu-ld --with-gnu-as --enable-initfini-array]
+        ignore line: [Thread model: single]
+        ignore line: [Supported LTO compression algorithms: zlib]
+        ignore line: [gcc version 12.1.0 (Zephyr SDK 0.15.2) ]
+        ignore line: [COMPILER_PATH=/home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/bin/../libexec/gcc/riscv64-zephyr-elf/12.1.0/:/home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/bin/../libexec/gcc/:/home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/bin/../lib/gcc/riscv64-zephyr-elf/12.1.0/../../../../riscv64-zephyr-elf/bin/]
+        ignore line: [LIBRARY_PATH=/home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/bin/../lib/gcc/riscv64-zephyr-elf/12.1.0/rv32im_zicsr_zifencei/ilp32/:/home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/bin/../lib/gcc/riscv64-zephyr-elf/12.1.0/../../../../riscv64-zephyr-elf/lib/rv32im_zicsr_zifencei/ilp32/:/home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/bin/../lib/gcc/riscv64-zephyr-elf/12.1.0/:/home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/bin/../lib/gcc/:/home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/bin/../lib/gcc/riscv64-zephyr-elf/12.1.0/../../../../riscv64-zephyr-elf/lib/]
+        ignore line: [COLLECT_GCC_OPTIONS='-nostartfiles' '-march=rv32imc_zicsr_zifencei' '-specs=nosys.specs' '-v' '-o' 'cmTC_87d50' '-mabi=ilp32' '-misa-spec=20191213' '-march=rv32imc_zicsr_zifencei' '-dumpdir' 'cmTC_87d50.']
+        link line: [ /home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/bin/../libexec/gcc/riscv64-zephyr-elf/12.1.0/collect2 -plugin /home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/bin/../libexec/gcc/riscv64-zephyr-elf/12.1.0/liblto_plugin.so -plugin-opt=/home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/bin/../libexec/gcc/riscv64-zephyr-elf/12.1.0/lto-wrapper -plugin-opt=-fresolution=/tmp/cccZ3W7f.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lnosys -melf32lriscv -o cmTC_87d50 -L/home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/bin/../lib/gcc/riscv64-zephyr-elf/12.1.0/rv32im_zicsr_zifencei/ilp32 -L/home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/bin/../lib/gcc/riscv64-zephyr-elf/12.1.0/../../../../riscv64-zephyr-elf/lib/rv32im_zicsr_zifencei/ilp32 -L/home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/bin/../lib/gcc/riscv64-zephyr-elf/12.1.0 -L/home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/bin/../lib/gcc -L/home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/bin/../lib/gcc/riscv64-zephyr-elf/12.1.0/../../../../riscv64-zephyr-elf/lib CMakeFiles/cmTC_87d50.dir/CMakeCCompilerABI.c.obj -lgcc --start-group -lc --end-group -lgcc --start-group -lgcc -lc -lnosys --end-group]
+          arg [/home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/bin/../libexec/gcc/riscv64-zephyr-elf/12.1.0/collect2] ==> ignore
+          arg [-plugin] ==> ignore
+          arg [/home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/bin/../libexec/gcc/riscv64-zephyr-elf/12.1.0/liblto_plugin.so] ==> ignore
+          arg [-plugin-opt=/home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/bin/../libexec/gcc/riscv64-zephyr-elf/12.1.0/lto-wrapper] ==> ignore
+          arg [-plugin-opt=-fresolution=/tmp/cccZ3W7f.res] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+          arg [-plugin-opt=-pass-through=-lc] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+          arg [-plugin-opt=-pass-through=-lc] ==> ignore
+          arg [-plugin-opt=-pass-through=-lnosys] ==> ignore
+          arg [-melf32lriscv] ==> ignore
+          arg [-o] ==> ignore
+          arg [cmTC_87d50] ==> ignore
+          arg [-L/home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/bin/../lib/gcc/riscv64-zephyr-elf/12.1.0/rv32im_zicsr_zifencei/ilp32] ==> dir [/home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/bin/../lib/gcc/riscv64-zephyr-elf/12.1.0/rv32im_zicsr_zifencei/ilp32]
+          arg [-L/home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/bin/../lib/gcc/riscv64-zephyr-elf/12.1.0/../../../../riscv64-zephyr-elf/lib/rv32im_zicsr_zifencei/ilp32] ==> dir [/home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/bin/../lib/gcc/riscv64-zephyr-elf/12.1.0/../../../../riscv64-zephyr-elf/lib/rv32im_zicsr_zifencei/ilp32]
+          arg [-L/home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/bin/../lib/gcc/riscv64-zephyr-elf/12.1.0] ==> dir [/home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/bin/../lib/gcc/riscv64-zephyr-elf/12.1.0]
+          arg [-L/home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/bin/../lib/gcc] ==> dir [/home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/bin/../lib/gcc]
+          arg [-L/home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/bin/../lib/gcc/riscv64-zephyr-elf/12.1.0/../../../../riscv64-zephyr-elf/lib] ==> dir [/home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/bin/../lib/gcc/riscv64-zephyr-elf/12.1.0/../../../../riscv64-zephyr-elf/lib]
+          arg [CMakeFiles/cmTC_87d50.dir/CMakeCCompilerABI.c.obj] ==> ignore
+          arg [-lgcc] ==> lib [gcc]
+          arg [--start-group] ==> ignore
+          arg [-lc] ==> lib [c]
+          arg [--end-group] ==> ignore
+          arg [-lgcc] ==> lib [gcc]
+          arg [--start-group] ==> ignore
+          arg [-lgcc] ==> lib [gcc]
+          arg [-lc] ==> lib [c]
+          arg [-lnosys] ==> lib [nosys]
+          arg [--end-group] ==> ignore
+        collapse library dir [/home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/bin/../lib/gcc/riscv64-zephyr-elf/12.1.0/rv32im_zicsr_zifencei/ilp32] ==> [/home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/lib/gcc/riscv64-zephyr-elf/12.1.0/rv32im_zicsr_zifencei/ilp32]
+        collapse library dir [/home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/bin/../lib/gcc/riscv64-zephyr-elf/12.1.0/../../../../riscv64-zephyr-elf/lib/rv32im_zicsr_zifencei/ilp32] ==> [/home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/riscv64-zephyr-elf/lib/rv32im_zicsr_zifencei/ilp32]
+        collapse library dir [/home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/bin/../lib/gcc/riscv64-zephyr-elf/12.1.0] ==> [/home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/lib/gcc/riscv64-zephyr-elf/12.1.0]
+        collapse library dir [/home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/bin/../lib/gcc] ==> [/home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/lib/gcc]
+        collapse library dir [/home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/bin/../lib/gcc/riscv64-zephyr-elf/12.1.0/../../../../riscv64-zephyr-elf/lib] ==> [/home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/riscv64-zephyr-elf/lib]
+        implicit libs: [gcc;c;gcc;gcc;c;nosys]
+        implicit objs: []
+        implicit dirs: [/home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/lib/gcc/riscv64-zephyr-elf/12.1.0/rv32im_zicsr_zifencei/ilp32;/home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/riscv64-zephyr-elf/lib/rv32im_zicsr_zifencei/ilp32;/home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/lib/gcc/riscv64-zephyr-elf/12.1.0;/home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/lib/gcc;/home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/riscv64-zephyr-elf/lib]
+        implicit fwks: []
+      
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/home/user/.local/lib/python3.9/site-packages/cmake/data/share/cmake-3.26/Modules/CMakeDetermineCompilerABI.cmake:57 (try_compile)"
+      - "/home/user/.local/lib/python3.9/site-packages/cmake/data/share/cmake-3.26/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "/home/user/csse4011/zephyrproject/modules/hal/espressif/tools/cmake/project.cmake:290 (__project)"
+      - "CMakeLists.txt:59 (project)"
+    checks:
+      - "Detecting CXX compiler ABI info"
+    directories:
+      source: "/home/user/csse4011/Vidar-Blue/ESP_GPIO_TEST/scu/build/esp-idf/build/bootloader/CMakeFiles/CMakeScratch/TryCompile-8KXuCw"
+      binary: "/home/user/csse4011/Vidar-Blue/ESP_GPIO_TEST/scu/build/esp-idf/build/bootloader/CMakeFiles/CMakeScratch/TryCompile-8KXuCw"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "-march=rv32imc_zicsr_zifencei"
+      CMAKE_EXE_LINKER_FLAGS: "-nostartfiles -march=rv32imc_zicsr_zifencei --specs=nosys.specs"
+      CMAKE_MODULE_PATH: "/home/user/csse4011/zephyrproject/modules/hal/espressif/tools/cmake;/home/user/csse4011/zephyrproject/modules/hal/espressif/tools/cmake/third_party"
+    buildResult:
+      variable: "CMAKE_CXX_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: /home/user/csse4011/Vidar-Blue/ESP_GPIO_TEST/scu/build/esp-idf/build/bootloader/CMakeFiles/CMakeScratch/TryCompile-8KXuCw
+        
+        Run Build Command(s):/usr/bin/ninja -v cmTC_e65c6 && [1/2] /home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/bin/riscv64-zephyr-elf-g++   -march=rv32imc_zicsr_zifencei    -v -o CMakeFiles/cmTC_e65c6.dir/CMakeCXXCompilerABI.cpp.obj -c /home/user/.local/lib/python3.9/site-packages/cmake/data/share/cmake-3.26/Modules/CMakeCXXCompilerABI.cpp
+        Using built-in specs.
+        COLLECT_GCC=/home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/bin/riscv64-zephyr-elf-g++
+        Target: riscv64-zephyr-elf
+        Configured with: /__w/_temp/workspace/build/.build/riscv64-zephyr-elf/src/gcc/configure --build=x86_64-build_pc-linux-gnu --host=x86_64-build_pc-linux-gnu --target=riscv64-zephyr-elf --prefix=/__w/_temp/workspace/output/riscv64-zephyr-elf --exec_prefix=/__w/_temp/workspace/output/riscv64-zephyr-elf --with-local-prefix=/__w/_temp/workspace/output/riscv64-zephyr-elf/riscv64-zephyr-elf --with-headers=/__w/_temp/workspace/output/riscv64-zephyr-elf/riscv64-zephyr-elf/include --with-newlib --enable-threads=no --disable-shared --with-arch=rv32ima_zicsr_zifencei --with-abi=ilp32 --with-pkgversion='Zephyr SDK 0.15.2' --with-bugurl=https://github.com/zephyrproject-rtos/sdk-ng/issues --enable-__cxa_atexit --disable-libgomp --disable-libmudflap --disable-libmpx --disable-libssp --disable-libquadmath --disable-libquadmath-support --disable-libstdcxx-verbose --with-gmp=/__w/_temp/workspace/build/.build/riscv64-zephyr-elf/buildtools --with-mpfr=/__w/_temp/workspace/build/.build/riscv64-zephyr-elf/buildtools --with-mpc=/__w/_temp/workspace/build/.build/riscv64-zephyr-elf/buildtools --with-isl=/__w/_temp/workspace/build/.build/riscv64-zephyr-elf/buildtools --enable-lto --enable-target-optspace --disable-nls --enable-multiarch --enable-languages=c,c++ --with-gnu-ld --with-gnu-as --enable-initfini-array
+        Thread model: single
+        Supported LTO compression algorithms: zlib
+        gcc version 12.1.0 (Zephyr SDK 0.15.2) 
+        COLLECT_GCC_OPTIONS='-march=rv32imc_zicsr_zifencei' '-v' '-o' 'CMakeFiles/cmTC_e65c6.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mabi=ilp32' '-misa-spec=20191213' '-march=rv32imc_zicsr_zifencei' '-dumpdir' 'CMakeFiles/cmTC_e65c6.dir/'
+         /home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/bin/../libexec/gcc/riscv64-zephyr-elf/12.1.0/cc1plus -quiet -v -imultilib rv32im_zicsr_zifencei/ilp32 -iprefix /home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/bin/../lib/gcc/riscv64-zephyr-elf/12.1.0/ /home/user/.local/lib/python3.9/site-packages/cmake/data/share/cmake-3.26/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_e65c6.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -march=rv32imc_zicsr_zifencei -mabi=ilp32 -misa-spec=20191213 -march=rv32imc_zicsr_zifencei -version -o /tmp/ccBLSWrP.s
+        GNU C++17 (Zephyr SDK 0.15.2) version 12.1.0 (riscv64-zephyr-elf)
+        	compiled by GNU C version 7.5.0, GMP version 6.2.1, MPFR version 4.1.0, MPC version 1.2.1, isl version isl-0.24-GMP
+        
+        GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+        ignoring duplicate directory "/home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/bin/../lib/gcc/../../lib/gcc/riscv64-zephyr-elf/12.1.0/../../../../riscv64-zephyr-elf/include/c++/12.1.0"
+        ignoring duplicate directory "/home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/bin/../lib/gcc/../../lib/gcc/riscv64-zephyr-elf/12.1.0/../../../../riscv64-zephyr-elf/include/c++/12.1.0/riscv64-zephyr-elf/rv32im_zicsr_zifencei/ilp32"
+        ignoring duplicate directory "/home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/bin/../lib/gcc/../../lib/gcc/riscv64-zephyr-elf/12.1.0/../../../../riscv64-zephyr-elf/include/c++/12.1.0/backward"
+        ignoring duplicate directory "/home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/bin/../lib/gcc/../../lib/gcc/riscv64-zephyr-elf/12.1.0/include"
+        ignoring duplicate directory "/home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/bin/../lib/gcc/../../lib/gcc/riscv64-zephyr-elf/12.1.0/include-fixed"
+        ignoring duplicate directory "/home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/bin/../lib/gcc/../../lib/gcc/riscv64-zephyr-elf/12.1.0/../../../../riscv64-zephyr-elf/sys-include"
+        ignoring duplicate directory "/home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/bin/../lib/gcc/../../lib/gcc/riscv64-zephyr-elf/12.1.0/../../../../riscv64-zephyr-elf/include"
+        #include "..." search starts here:
+        #include <...> search starts here:
+         /home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/bin/../lib/gcc/riscv64-zephyr-elf/12.1.0/../../../../riscv64-zephyr-elf/include/c++/12.1.0
+         /home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/bin/../lib/gcc/riscv64-zephyr-elf/12.1.0/../../../../riscv64-zephyr-elf/include/c++/12.1.0/riscv64-zephyr-elf/rv32im_zicsr_zifencei/ilp32
+         /home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/bin/../lib/gcc/riscv64-zephyr-elf/12.1.0/../../../../riscv64-zephyr-elf/include/c++/12.1.0/backward
+         /home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/bin/../lib/gcc/riscv64-zephyr-elf/12.1.0/include
+         /home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/bin/../lib/gcc/riscv64-zephyr-elf/12.1.0/include-fixed
+         /home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/bin/../lib/gcc/riscv64-zephyr-elf/12.1.0/../../../../riscv64-zephyr-elf/sys-include
+         /home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/bin/../lib/gcc/riscv64-zephyr-elf/12.1.0/../../../../riscv64-zephyr-elf/include
+        End of search list.
+        GNU C++17 (Zephyr SDK 0.15.2) version 12.1.0 (riscv64-zephyr-elf)
+        	compiled by GNU C version 7.5.0, GMP version 6.2.1, MPFR version 4.1.0, MPC version 1.2.1, isl version isl-0.24-GMP
+        
+        GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+        Compiler executable checksum: 92c59c65b4e5e80f0ba72177f2e0db2c
+        COLLECT_GCC_OPTIONS='-march=rv32imc_zicsr_zifencei' '-v' '-o' 'CMakeFiles/cmTC_e65c6.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mabi=ilp32' '-misa-spec=20191213' '-march=rv32imc_zicsr_zifencei' '-dumpdir' 'CMakeFiles/cmTC_e65c6.dir/'
+         /home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/bin/../lib/gcc/riscv64-zephyr-elf/12.1.0/../../../../riscv64-zephyr-elf/bin/as -v --traditional-format -march=rv32imc_zicsr_zifencei -march=rv32imc_zicsr_zifencei -mabi=ilp32 -misa-spec=20191213 -o CMakeFiles/cmTC_e65c6.dir/CMakeCXXCompilerABI.cpp.obj /tmp/ccBLSWrP.s
+        GNU assembler version 2.38 (riscv64-zephyr-elf) using BFD version (Zephyr SDK 0.15.2) 2.38
+        COMPILER_PATH=/home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/bin/../libexec/gcc/riscv64-zephyr-elf/12.1.0/:/home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/bin/../libexec/gcc/:/home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/bin/../lib/gcc/riscv64-zephyr-elf/12.1.0/../../../../riscv64-zephyr-elf/bin/
+        LIBRARY_PATH=/home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/bin/../lib/gcc/riscv64-zephyr-elf/12.1.0/rv32im_zicsr_zifencei/ilp32/:/home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/bin/../lib/gcc/riscv64-zephyr-elf/12.1.0/../../../../riscv64-zephyr-elf/lib/rv32im_zicsr_zifencei/ilp32/:/home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/bin/../lib/gcc/riscv64-zephyr-elf/12.1.0/:/home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/bin/../lib/gcc/:/home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/bin/../lib/gcc/riscv64-zephyr-elf/12.1.0/../../../../riscv64-zephyr-elf/lib/
+        COLLECT_GCC_OPTIONS='-march=rv32imc_zicsr_zifencei' '-v' '-o' 'CMakeFiles/cmTC_e65c6.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mabi=ilp32' '-misa-spec=20191213' '-march=rv32imc_zicsr_zifencei' '-dumpdir' 'CMakeFiles/cmTC_e65c6.dir/CMakeCXXCompilerABI.cpp.'
+        [2/2] : && /home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/bin/riscv64-zephyr-elf-g++ -march=rv32imc_zicsr_zifencei -nostartfiles -march=rv32imc_zicsr_zifencei --specs=nosys.specs -v CMakeFiles/cmTC_e65c6.dir/CMakeCXXCompilerABI.cpp.obj -o cmTC_e65c6   && :
+        Using built-in specs.
+        Reading specs from /home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/bin/../lib/gcc/riscv64-zephyr-elf/12.1.0/../../../../riscv64-zephyr-elf/lib/nosys.specs
+        rename spec link_gcc_c_sequence to nosys_link_gcc_c_sequence
+        COLLECT_GCC=/home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/bin/riscv64-zephyr-elf-g++
+        COLLECT_LTO_WRAPPER=/home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/bin/../libexec/gcc/riscv64-zephyr-elf/12.1.0/lto-wrapper
+        Target: riscv64-zephyr-elf
+        Configured with: /__w/_temp/workspace/build/.build/riscv64-zephyr-elf/src/gcc/configure --build=x86_64-build_pc-linux-gnu --host=x86_64-build_pc-linux-gnu --target=riscv64-zephyr-elf --prefix=/__w/_temp/workspace/output/riscv64-zephyr-elf --exec_prefix=/__w/_temp/workspace/output/riscv64-zephyr-elf --with-local-prefix=/__w/_temp/workspace/output/riscv64-zephyr-elf/riscv64-zephyr-elf --with-headers=/__w/_temp/workspace/output/riscv64-zephyr-elf/riscv64-zephyr-elf/include --with-newlib --enable-threads=no --disable-shared --with-arch=rv32ima_zicsr_zifencei --with-abi=ilp32 --with-pkgversion='Zephyr SDK 0.15.2' --with-bugurl=https://github.com/zephyrproject-rtos/sdk-ng/issues --enable-__cxa_atexit --disable-libgomp --disable-libmudflap --disable-libmpx --disable-libssp --disable-libquadmath --disable-libquadmath-support --disable-libstdcxx-verbose --with-gmp=/__w/_temp/workspace/build/.build/riscv64-zephyr-elf/buildtools --with-mpfr=/__w/_temp/workspace/build/.build/riscv64-zephyr-elf/buildtools --with-mpc=/__w/_temp/workspace/build/.build/riscv64-zephyr-elf/buildtools --with-isl=/__w/_temp/workspace/build/.build/riscv64-zephyr-elf/buildtools --enable-lto --enable-target-optspace --disable-nls --enable-multiarch --enable-languages=c,c++ --with-gnu-ld --with-gnu-as --enable-initfini-array
+        Thread model: single
+        Supported LTO compression algorithms: zlib
+        gcc version 12.1.0 (Zephyr SDK 0.15.2) 
+        COMPILER_PATH=/home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/bin/../libexec/gcc/riscv64-zephyr-elf/12.1.0/:/home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/bin/../libexec/gcc/:/home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/bin/../lib/gcc/riscv64-zephyr-elf/12.1.0/../../../../riscv64-zephyr-elf/bin/
+        LIBRARY_PATH=/home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/bin/../lib/gcc/riscv64-zephyr-elf/12.1.0/rv32im_zicsr_zifencei/ilp32/:/home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/bin/../lib/gcc/riscv64-zephyr-elf/12.1.0/../../../../riscv64-zephyr-elf/lib/rv32im_zicsr_zifencei/ilp32/:/home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/bin/../lib/gcc/riscv64-zephyr-elf/12.1.0/:/home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/bin/../lib/gcc/:/home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/bin/../lib/gcc/riscv64-zephyr-elf/12.1.0/../../../../riscv64-zephyr-elf/lib/
+        COLLECT_GCC_OPTIONS='-nostartfiles' '-march=rv32imc_zicsr_zifencei' '-specs=nosys.specs' '-v' '-o' 'cmTC_e65c6' '-mabi=ilp32' '-misa-spec=20191213' '-march=rv32imc_zicsr_zifencei' '-dumpdir' 'cmTC_e65c6.'
+         /home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/bin/../libexec/gcc/riscv64-zephyr-elf/12.1.0/collect2 -plugin /home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/bin/../libexec/gcc/riscv64-zephyr-elf/12.1.0/liblto_plugin.so -plugin-opt=/home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/bin/../libexec/gcc/riscv64-zephyr-elf/12.1.0/lto-wrapper -plugin-opt=-fresolution=/tmp/ccYeqOhs.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lnosys -melf32lriscv -o cmTC_e65c6 -L/home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/bin/../lib/gcc/riscv64-zephyr-elf/12.1.0/rv32im_zicsr_zifencei/ilp32 -L/home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/bin/../lib/gcc/riscv64-zephyr-elf/12.1.0/../../../../riscv64-zephyr-elf/lib/rv32im_zicsr_zifencei/ilp32 -L/home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/bin/../lib/gcc/riscv64-zephyr-elf/12.1.0 -L/home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/bin/../lib/gcc -L/home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/bin/../lib/gcc/riscv64-zephyr-elf/12.1.0/../../../../riscv64-zephyr-elf/lib CMakeFiles/cmTC_e65c6.dir/CMakeCXXCompilerABI.cpp.obj -lstdc++ -lm -lgcc --start-group -lc --end-group -lgcc --start-group -lgcc -lc -lnosys --end-group
+        /home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/bin/../lib/gcc/riscv64-zephyr-elf/12.1.0/../../../../riscv64-zephyr-elf/bin/ld: warning: cannot find entry symbol _start; defaulting to 0000000000010074
+        COLLECT_GCC_OPTIONS='-nostartfiles' '-march=rv32imc_zicsr_zifencei' '-specs=nosys.specs' '-v' '-o' 'cmTC_e65c6' '-mabi=ilp32' '-misa-spec=20191213' '-march=rv32imc_zicsr_zifencei' '-dumpdir' 'cmTC_e65c6.'
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/home/user/.local/lib/python3.9/site-packages/cmake/data/share/cmake-3.26/Modules/CMakeDetermineCompilerABI.cmake:127 (message)"
+      - "/home/user/.local/lib/python3.9/site-packages/cmake/data/share/cmake-3.26/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "/home/user/csse4011/zephyrproject/modules/hal/espressif/tools/cmake/project.cmake:290 (__project)"
+      - "CMakeLists.txt:59 (project)"
+    message: |
+      Parsed CXX implicit include dir info: rv=done
+        found start of include info
+        found start of implicit include info
+          add: [/home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/bin/../lib/gcc/riscv64-zephyr-elf/12.1.0/../../../../riscv64-zephyr-elf/include/c++/12.1.0]
+          add: [/home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/bin/../lib/gcc/riscv64-zephyr-elf/12.1.0/../../../../riscv64-zephyr-elf/include/c++/12.1.0/riscv64-zephyr-elf/rv32im_zicsr_zifencei/ilp32]
+          add: [/home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/bin/../lib/gcc/riscv64-zephyr-elf/12.1.0/../../../../riscv64-zephyr-elf/include/c++/12.1.0/backward]
+          add: [/home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/bin/../lib/gcc/riscv64-zephyr-elf/12.1.0/include]
+          add: [/home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/bin/../lib/gcc/riscv64-zephyr-elf/12.1.0/include-fixed]
+          add: [/home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/bin/../lib/gcc/riscv64-zephyr-elf/12.1.0/../../../../riscv64-zephyr-elf/sys-include]
+          add: [/home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/bin/../lib/gcc/riscv64-zephyr-elf/12.1.0/../../../../riscv64-zephyr-elf/include]
+        end of search list found
+        collapse include dir [/home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/bin/../lib/gcc/riscv64-zephyr-elf/12.1.0/../../../../riscv64-zephyr-elf/include/c++/12.1.0] ==> [/home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/riscv64-zephyr-elf/include/c++/12.1.0]
+        collapse include dir [/home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/bin/../lib/gcc/riscv64-zephyr-elf/12.1.0/../../../../riscv64-zephyr-elf/include/c++/12.1.0/riscv64-zephyr-elf/rv32im_zicsr_zifencei/ilp32] ==> [/home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/riscv64-zephyr-elf/include/c++/12.1.0/riscv64-zephyr-elf/rv32im_zicsr_zifencei/ilp32]
+        collapse include dir [/home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/bin/../lib/gcc/riscv64-zephyr-elf/12.1.0/../../../../riscv64-zephyr-elf/include/c++/12.1.0/backward] ==> [/home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/riscv64-zephyr-elf/include/c++/12.1.0/backward]
+        collapse include dir [/home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/bin/../lib/gcc/riscv64-zephyr-elf/12.1.0/include] ==> [/home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/lib/gcc/riscv64-zephyr-elf/12.1.0/include]
+        collapse include dir [/home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/bin/../lib/gcc/riscv64-zephyr-elf/12.1.0/include-fixed] ==> [/home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/lib/gcc/riscv64-zephyr-elf/12.1.0/include-fixed]
+        collapse include dir [/home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/bin/../lib/gcc/riscv64-zephyr-elf/12.1.0/../../../../riscv64-zephyr-elf/sys-include] ==> [/home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/riscv64-zephyr-elf/sys-include]
+        collapse include dir [/home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/bin/../lib/gcc/riscv64-zephyr-elf/12.1.0/../../../../riscv64-zephyr-elf/include] ==> [/home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/riscv64-zephyr-elf/include]
+        implicit include dirs: [/home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/riscv64-zephyr-elf/include/c++/12.1.0;/home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/riscv64-zephyr-elf/include/c++/12.1.0/riscv64-zephyr-elf/rv32im_zicsr_zifencei/ilp32;/home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/riscv64-zephyr-elf/include/c++/12.1.0/backward;/home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/lib/gcc/riscv64-zephyr-elf/12.1.0/include;/home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/lib/gcc/riscv64-zephyr-elf/12.1.0/include-fixed;/home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/riscv64-zephyr-elf/sys-include;/home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/riscv64-zephyr-elf/include]
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/home/user/.local/lib/python3.9/site-packages/cmake/data/share/cmake-3.26/Modules/CMakeDetermineCompilerABI.cmake:152 (message)"
+      - "/home/user/.local/lib/python3.9/site-packages/cmake/data/share/cmake-3.26/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "/home/user/csse4011/zephyrproject/modules/hal/espressif/tools/cmake/project.cmake:290 (__project)"
+      - "CMakeLists.txt:59 (project)"
+    message: |
+      Parsed CXX implicit link information:
+        link line regex: [^( *|.*[/\\])(riscv64-zephyr-elf-ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        ignore line: [Change Dir: /home/user/csse4011/Vidar-Blue/ESP_GPIO_TEST/scu/build/esp-idf/build/bootloader/CMakeFiles/CMakeScratch/TryCompile-8KXuCw]
+        ignore line: []
+        ignore line: [Run Build Command(s):/usr/bin/ninja -v cmTC_e65c6 && [1/2] /home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/bin/riscv64-zephyr-elf-g++   -march=rv32imc_zicsr_zifencei    -v -o CMakeFiles/cmTC_e65c6.dir/CMakeCXXCompilerABI.cpp.obj -c /home/user/.local/lib/python3.9/site-packages/cmake/data/share/cmake-3.26/Modules/CMakeCXXCompilerABI.cpp]
+        ignore line: [Using built-in specs.]
+        ignore line: [COLLECT_GCC=/home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/bin/riscv64-zephyr-elf-g++]
+        ignore line: [Target: riscv64-zephyr-elf]
+        ignore line: [Configured with: /__w/_temp/workspace/build/.build/riscv64-zephyr-elf/src/gcc/configure --build=x86_64-build_pc-linux-gnu --host=x86_64-build_pc-linux-gnu --target=riscv64-zephyr-elf --prefix=/__w/_temp/workspace/output/riscv64-zephyr-elf --exec_prefix=/__w/_temp/workspace/output/riscv64-zephyr-elf --with-local-prefix=/__w/_temp/workspace/output/riscv64-zephyr-elf/riscv64-zephyr-elf --with-headers=/__w/_temp/workspace/output/riscv64-zephyr-elf/riscv64-zephyr-elf/include --with-newlib --enable-threads=no --disable-shared --with-arch=rv32ima_zicsr_zifencei --with-abi=ilp32 --with-pkgversion='Zephyr SDK 0.15.2' --with-bugurl=https://github.com/zephyrproject-rtos/sdk-ng/issues --enable-__cxa_atexit --disable-libgomp --disable-libmudflap --disable-libmpx --disable-libssp --disable-libquadmath --disable-libquadmath-support --disable-libstdcxx-verbose --with-gmp=/__w/_temp/workspace/build/.build/riscv64-zephyr-elf/buildtools --with-mpfr=/__w/_temp/workspace/build/.build/riscv64-zephyr-elf/buildtools --with-mpc=/__w/_temp/workspace/build/.build/riscv64-zephyr-elf/buildtools --with-isl=/__w/_temp/workspace/build/.build/riscv64-zephyr-elf/buildtools --enable-lto --enable-target-optspace --disable-nls --enable-multiarch --enable-languages=c,c++ --with-gnu-ld --with-gnu-as --enable-initfini-array]
+        ignore line: [Thread model: single]
+        ignore line: [Supported LTO compression algorithms: zlib]
+        ignore line: [gcc version 12.1.0 (Zephyr SDK 0.15.2) ]
+        ignore line: [COLLECT_GCC_OPTIONS='-march=rv32imc_zicsr_zifencei' '-v' '-o' 'CMakeFiles/cmTC_e65c6.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mabi=ilp32' '-misa-spec=20191213' '-march=rv32imc_zicsr_zifencei' '-dumpdir' 'CMakeFiles/cmTC_e65c6.dir/']
+        ignore line: [ /home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/bin/../libexec/gcc/riscv64-zephyr-elf/12.1.0/cc1plus -quiet -v -imultilib rv32im_zicsr_zifencei/ilp32 -iprefix /home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/bin/../lib/gcc/riscv64-zephyr-elf/12.1.0/ /home/user/.local/lib/python3.9/site-packages/cmake/data/share/cmake-3.26/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_e65c6.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -march=rv32imc_zicsr_zifencei -mabi=ilp32 -misa-spec=20191213 -march=rv32imc_zicsr_zifencei -version -o /tmp/ccBLSWrP.s]
+        ignore line: [GNU C++17 (Zephyr SDK 0.15.2) version 12.1.0 (riscv64-zephyr-elf)]
+        ignore line: [	compiled by GNU C version 7.5.0  GMP version 6.2.1  MPFR version 4.1.0  MPC version 1.2.1  isl version isl-0.24-GMP]
+        ignore line: []
+        ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+        ignore line: [ignoring duplicate directory "/home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/bin/../lib/gcc/../../lib/gcc/riscv64-zephyr-elf/12.1.0/../../../../riscv64-zephyr-elf/include/c++/12.1.0"]
+        ignore line: [ignoring duplicate directory "/home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/bin/../lib/gcc/../../lib/gcc/riscv64-zephyr-elf/12.1.0/../../../../riscv64-zephyr-elf/include/c++/12.1.0/riscv64-zephyr-elf/rv32im_zicsr_zifencei/ilp32"]
+        ignore line: [ignoring duplicate directory "/home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/bin/../lib/gcc/../../lib/gcc/riscv64-zephyr-elf/12.1.0/../../../../riscv64-zephyr-elf/include/c++/12.1.0/backward"]
+        ignore line: [ignoring duplicate directory "/home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/bin/../lib/gcc/../../lib/gcc/riscv64-zephyr-elf/12.1.0/include"]
+        ignore line: [ignoring duplicate directory "/home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/bin/../lib/gcc/../../lib/gcc/riscv64-zephyr-elf/12.1.0/include-fixed"]
+        ignore line: [ignoring duplicate directory "/home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/bin/../lib/gcc/../../lib/gcc/riscv64-zephyr-elf/12.1.0/../../../../riscv64-zephyr-elf/sys-include"]
+        ignore line: [ignoring duplicate directory "/home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/bin/../lib/gcc/../../lib/gcc/riscv64-zephyr-elf/12.1.0/../../../../riscv64-zephyr-elf/include"]
+        ignore line: [#include "..." search starts here:]
+        ignore line: [#include <...> search starts here:]
+        ignore line: [ /home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/bin/../lib/gcc/riscv64-zephyr-elf/12.1.0/../../../../riscv64-zephyr-elf/include/c++/12.1.0]
+        ignore line: [ /home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/bin/../lib/gcc/riscv64-zephyr-elf/12.1.0/../../../../riscv64-zephyr-elf/include/c++/12.1.0/riscv64-zephyr-elf/rv32im_zicsr_zifencei/ilp32]
+        ignore line: [ /home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/bin/../lib/gcc/riscv64-zephyr-elf/12.1.0/../../../../riscv64-zephyr-elf/include/c++/12.1.0/backward]
+        ignore line: [ /home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/bin/../lib/gcc/riscv64-zephyr-elf/12.1.0/include]
+        ignore line: [ /home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/bin/../lib/gcc/riscv64-zephyr-elf/12.1.0/include-fixed]
+        ignore line: [ /home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/bin/../lib/gcc/riscv64-zephyr-elf/12.1.0/../../../../riscv64-zephyr-elf/sys-include]
+        ignore line: [ /home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/bin/../lib/gcc/riscv64-zephyr-elf/12.1.0/../../../../riscv64-zephyr-elf/include]
+        ignore line: [End of search list.]
+        ignore line: [GNU C++17 (Zephyr SDK 0.15.2) version 12.1.0 (riscv64-zephyr-elf)]
+        ignore line: [	compiled by GNU C version 7.5.0  GMP version 6.2.1  MPFR version 4.1.0  MPC version 1.2.1  isl version isl-0.24-GMP]
+        ignore line: []
+        ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+        ignore line: [Compiler executable checksum: 92c59c65b4e5e80f0ba72177f2e0db2c]
+        ignore line: [COLLECT_GCC_OPTIONS='-march=rv32imc_zicsr_zifencei' '-v' '-o' 'CMakeFiles/cmTC_e65c6.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mabi=ilp32' '-misa-spec=20191213' '-march=rv32imc_zicsr_zifencei' '-dumpdir' 'CMakeFiles/cmTC_e65c6.dir/']
+        ignore line: [ /home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/bin/../lib/gcc/riscv64-zephyr-elf/12.1.0/../../../../riscv64-zephyr-elf/bin/as -v --traditional-format -march=rv32imc_zicsr_zifencei -march=rv32imc_zicsr_zifencei -mabi=ilp32 -misa-spec=20191213 -o CMakeFiles/cmTC_e65c6.dir/CMakeCXXCompilerABI.cpp.obj /tmp/ccBLSWrP.s]
+        ignore line: [GNU assembler version 2.38 (riscv64-zephyr-elf) using BFD version (Zephyr SDK 0.15.2) 2.38]
+        ignore line: [COMPILER_PATH=/home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/bin/../libexec/gcc/riscv64-zephyr-elf/12.1.0/:/home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/bin/../libexec/gcc/:/home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/bin/../lib/gcc/riscv64-zephyr-elf/12.1.0/../../../../riscv64-zephyr-elf/bin/]
+        ignore line: [LIBRARY_PATH=/home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/bin/../lib/gcc/riscv64-zephyr-elf/12.1.0/rv32im_zicsr_zifencei/ilp32/:/home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/bin/../lib/gcc/riscv64-zephyr-elf/12.1.0/../../../../riscv64-zephyr-elf/lib/rv32im_zicsr_zifencei/ilp32/:/home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/bin/../lib/gcc/riscv64-zephyr-elf/12.1.0/:/home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/bin/../lib/gcc/:/home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/bin/../lib/gcc/riscv64-zephyr-elf/12.1.0/../../../../riscv64-zephyr-elf/lib/]
+        ignore line: [COLLECT_GCC_OPTIONS='-march=rv32imc_zicsr_zifencei' '-v' '-o' 'CMakeFiles/cmTC_e65c6.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mabi=ilp32' '-misa-spec=20191213' '-march=rv32imc_zicsr_zifencei' '-dumpdir' 'CMakeFiles/cmTC_e65c6.dir/CMakeCXXCompilerABI.cpp.']
+        ignore line: [[2/2] : && /home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/bin/riscv64-zephyr-elf-g++ -march=rv32imc_zicsr_zifencei -nostartfiles -march=rv32imc_zicsr_zifencei --specs=nosys.specs -v CMakeFiles/cmTC_e65c6.dir/CMakeCXXCompilerABI.cpp.obj -o cmTC_e65c6   && :]
+        ignore line: [Using built-in specs.]
+        ignore line: [Reading specs from /home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/bin/../lib/gcc/riscv64-zephyr-elf/12.1.0/../../../../riscv64-zephyr-elf/lib/nosys.specs]
+        ignore line: [rename spec link_gcc_c_sequence to nosys_link_gcc_c_sequence]
+        ignore line: [COLLECT_GCC=/home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/bin/riscv64-zephyr-elf-g++]
+        ignore line: [COLLECT_LTO_WRAPPER=/home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/bin/../libexec/gcc/riscv64-zephyr-elf/12.1.0/lto-wrapper]
+        ignore line: [Target: riscv64-zephyr-elf]
+        ignore line: [Configured with: /__w/_temp/workspace/build/.build/riscv64-zephyr-elf/src/gcc/configure --build=x86_64-build_pc-linux-gnu --host=x86_64-build_pc-linux-gnu --target=riscv64-zephyr-elf --prefix=/__w/_temp/workspace/output/riscv64-zephyr-elf --exec_prefix=/__w/_temp/workspace/output/riscv64-zephyr-elf --with-local-prefix=/__w/_temp/workspace/output/riscv64-zephyr-elf/riscv64-zephyr-elf --with-headers=/__w/_temp/workspace/output/riscv64-zephyr-elf/riscv64-zephyr-elf/include --with-newlib --enable-threads=no --disable-shared --with-arch=rv32ima_zicsr_zifencei --with-abi=ilp32 --with-pkgversion='Zephyr SDK 0.15.2' --with-bugurl=https://github.com/zephyrproject-rtos/sdk-ng/issues --enable-__cxa_atexit --disable-libgomp --disable-libmudflap --disable-libmpx --disable-libssp --disable-libquadmath --disable-libquadmath-support --disable-libstdcxx-verbose --with-gmp=/__w/_temp/workspace/build/.build/riscv64-zephyr-elf/buildtools --with-mpfr=/__w/_temp/workspace/build/.build/riscv64-zephyr-elf/buildtools --with-mpc=/__w/_temp/workspace/build/.build/riscv64-zephyr-elf/buildtools --with-isl=/__w/_temp/workspace/build/.build/riscv64-zephyr-elf/buildtools --enable-lto --enable-target-optspace --disable-nls --enable-multiarch --enable-languages=c,c++ --with-gnu-ld --with-gnu-as --enable-initfini-array]
+        ignore line: [Thread model: single]
+        ignore line: [Supported LTO compression algorithms: zlib]
+        ignore line: [gcc version 12.1.0 (Zephyr SDK 0.15.2) ]
+        ignore line: [COMPILER_PATH=/home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/bin/../libexec/gcc/riscv64-zephyr-elf/12.1.0/:/home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/bin/../libexec/gcc/:/home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/bin/../lib/gcc/riscv64-zephyr-elf/12.1.0/../../../../riscv64-zephyr-elf/bin/]
+        ignore line: [LIBRARY_PATH=/home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/bin/../lib/gcc/riscv64-zephyr-elf/12.1.0/rv32im_zicsr_zifencei/ilp32/:/home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/bin/../lib/gcc/riscv64-zephyr-elf/12.1.0/../../../../riscv64-zephyr-elf/lib/rv32im_zicsr_zifencei/ilp32/:/home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/bin/../lib/gcc/riscv64-zephyr-elf/12.1.0/:/home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/bin/../lib/gcc/:/home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/bin/../lib/gcc/riscv64-zephyr-elf/12.1.0/../../../../riscv64-zephyr-elf/lib/]
+        ignore line: [COLLECT_GCC_OPTIONS='-nostartfiles' '-march=rv32imc_zicsr_zifencei' '-specs=nosys.specs' '-v' '-o' 'cmTC_e65c6' '-mabi=ilp32' '-misa-spec=20191213' '-march=rv32imc_zicsr_zifencei' '-dumpdir' 'cmTC_e65c6.']
+        link line: [ /home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/bin/../libexec/gcc/riscv64-zephyr-elf/12.1.0/collect2 -plugin /home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/bin/../libexec/gcc/riscv64-zephyr-elf/12.1.0/liblto_plugin.so -plugin-opt=/home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/bin/../libexec/gcc/riscv64-zephyr-elf/12.1.0/lto-wrapper -plugin-opt=-fresolution=/tmp/ccYeqOhs.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lnosys -melf32lriscv -o cmTC_e65c6 -L/home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/bin/../lib/gcc/riscv64-zephyr-elf/12.1.0/rv32im_zicsr_zifencei/ilp32 -L/home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/bin/../lib/gcc/riscv64-zephyr-elf/12.1.0/../../../../riscv64-zephyr-elf/lib/rv32im_zicsr_zifencei/ilp32 -L/home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/bin/../lib/gcc/riscv64-zephyr-elf/12.1.0 -L/home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/bin/../lib/gcc -L/home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/bin/../lib/gcc/riscv64-zephyr-elf/12.1.0/../../../../riscv64-zephyr-elf/lib CMakeFiles/cmTC_e65c6.dir/CMakeCXXCompilerABI.cpp.obj -lstdc++ -lm -lgcc --start-group -lc --end-group -lgcc --start-group -lgcc -lc -lnosys --end-group]
+          arg [/home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/bin/../libexec/gcc/riscv64-zephyr-elf/12.1.0/collect2] ==> ignore
+          arg [-plugin] ==> ignore
+          arg [/home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/bin/../libexec/gcc/riscv64-zephyr-elf/12.1.0/liblto_plugin.so] ==> ignore
+          arg [-plugin-opt=/home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/bin/../libexec/gcc/riscv64-zephyr-elf/12.1.0/lto-wrapper] ==> ignore
+          arg [-plugin-opt=-fresolution=/tmp/ccYeqOhs.res] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+          arg [-plugin-opt=-pass-through=-lc] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+          arg [-plugin-opt=-pass-through=-lc] ==> ignore
+          arg [-plugin-opt=-pass-through=-lnosys] ==> ignore
+          arg [-melf32lriscv] ==> ignore
+          arg [-o] ==> ignore
+          arg [cmTC_e65c6] ==> ignore
+          arg [-L/home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/bin/../lib/gcc/riscv64-zephyr-elf/12.1.0/rv32im_zicsr_zifencei/ilp32] ==> dir [/home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/bin/../lib/gcc/riscv64-zephyr-elf/12.1.0/rv32im_zicsr_zifencei/ilp32]
+          arg [-L/home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/bin/../lib/gcc/riscv64-zephyr-elf/12.1.0/../../../../riscv64-zephyr-elf/lib/rv32im_zicsr_zifencei/ilp32] ==> dir [/home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/bin/../lib/gcc/riscv64-zephyr-elf/12.1.0/../../../../riscv64-zephyr-elf/lib/rv32im_zicsr_zifencei/ilp32]
+          arg [-L/home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/bin/../lib/gcc/riscv64-zephyr-elf/12.1.0] ==> dir [/home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/bin/../lib/gcc/riscv64-zephyr-elf/12.1.0]
+          arg [-L/home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/bin/../lib/gcc] ==> dir [/home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/bin/../lib/gcc]
+          arg [-L/home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/bin/../lib/gcc/riscv64-zephyr-elf/12.1.0/../../../../riscv64-zephyr-elf/lib] ==> dir [/home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/bin/../lib/gcc/riscv64-zephyr-elf/12.1.0/../../../../riscv64-zephyr-elf/lib]
+          arg [CMakeFiles/cmTC_e65c6.dir/CMakeCXXCompilerABI.cpp.obj] ==> ignore
+          arg [-lstdc++] ==> lib [stdc++]
+          arg [-lm] ==> lib [m]
+          arg [-lgcc] ==> lib [gcc]
+          arg [--start-group] ==> ignore
+          arg [-lc] ==> lib [c]
+          arg [--end-group] ==> ignore
+          arg [-lgcc] ==> lib [gcc]
+          arg [--start-group] ==> ignore
+          arg [-lgcc] ==> lib [gcc]
+          arg [-lc] ==> lib [c]
+          arg [-lnosys] ==> lib [nosys]
+          arg [--end-group] ==> ignore
+        collapse library dir [/home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/bin/../lib/gcc/riscv64-zephyr-elf/12.1.0/rv32im_zicsr_zifencei/ilp32] ==> [/home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/lib/gcc/riscv64-zephyr-elf/12.1.0/rv32im_zicsr_zifencei/ilp32]
+        collapse library dir [/home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/bin/../lib/gcc/riscv64-zephyr-elf/12.1.0/../../../../riscv64-zephyr-elf/lib/rv32im_zicsr_zifencei/ilp32] ==> [/home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/riscv64-zephyr-elf/lib/rv32im_zicsr_zifencei/ilp32]
+        collapse library dir [/home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/bin/../lib/gcc/riscv64-zephyr-elf/12.1.0] ==> [/home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/lib/gcc/riscv64-zephyr-elf/12.1.0]
+        collapse library dir [/home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/bin/../lib/gcc] ==> [/home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/lib/gcc]
+        collapse library dir [/home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/bin/../lib/gcc/riscv64-zephyr-elf/12.1.0/../../../../riscv64-zephyr-elf/lib] ==> [/home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/riscv64-zephyr-elf/lib]
+        implicit libs: [stdc++;m;gcc;c;gcc;gcc;c;nosys]
+        implicit objs: []
+        implicit dirs: [/home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/lib/gcc/riscv64-zephyr-elf/12.1.0/rv32im_zicsr_zifencei/ilp32;/home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/riscv64-zephyr-elf/lib/rv32im_zicsr_zifencei/ilp32;/home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/lib/gcc/riscv64-zephyr-elf/12.1.0;/home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/lib/gcc;/home/user/zephyr-sdk-0.15.2/riscv64-zephyr-elf/riscv64-zephyr-elf/lib]
+        implicit fwks: []
+      
+      
+...

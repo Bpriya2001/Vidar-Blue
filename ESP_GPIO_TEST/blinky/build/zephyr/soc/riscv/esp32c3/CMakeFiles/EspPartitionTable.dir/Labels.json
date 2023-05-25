@@ -1,0 +1,43 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "/home/user/csse4011/Vidar-Blue/ESP_GPIO_TEST/blinky/build/zephyr/soc/riscv/esp32c3/CMakeFiles/EspPartitionTable"
+		},
+		{
+			"file" : "/home/user/csse4011/Vidar-Blue/ESP_GPIO_TEST/blinky/build/zephyr/soc/riscv/esp32c3/CMakeFiles/EspPartitionTable.rule"
+		},
+		{
+			"file" : "/home/user/csse4011/Vidar-Blue/ESP_GPIO_TEST/blinky/build/zephyr/soc/riscv/esp32c3/CMakeFiles/EspPartitionTable-complete.rule"
+		},
+		{
+			"file" : "/home/user/csse4011/Vidar-Blue/ESP_GPIO_TEST/blinky/build/zephyr/soc/riscv/esp32c3/EspPartitionTable-prefix/src/EspPartitionTable-stamp/EspPartitionTable-build.rule"
+		},
+		{
+			"file" : "/home/user/csse4011/Vidar-Blue/ESP_GPIO_TEST/blinky/build/zephyr/soc/riscv/esp32c3/EspPartitionTable-prefix/src/EspPartitionTable-stamp/EspPartitionTable-configure.rule"
+		},
+		{
+			"file" : "/home/user/csse4011/Vidar-Blue/ESP_GPIO_TEST/blinky/build/zephyr/soc/riscv/esp32c3/EspPartitionTable-prefix/src/EspPartitionTable-stamp/EspPartitionTable-download.rule"
+		},
+		{
+			"file" : "/home/user/csse4011/Vidar-Blue/ESP_GPIO_TEST/blinky/build/zephyr/soc/riscv/esp32c3/EspPartitionTable-prefix/src/EspPartitionTable-stamp/EspPartitionTable-install.rule"
+		},
+		{
+			"file" : "/home/user/csse4011/Vidar-Blue/ESP_GPIO_TEST/blinky/build/zephyr/soc/riscv/esp32c3/EspPartitionTable-prefix/src/EspPartitionTable-stamp/EspPartitionTable-mkdir.rule"
+		},
+		{
+			"file" : "/home/user/csse4011/Vidar-Blue/ESP_GPIO_TEST/blinky/build/zephyr/soc/riscv/esp32c3/EspPartitionTable-prefix/src/EspPartitionTable-stamp/EspPartitionTable-patch.rule"
+		},
+		{
+			"file" : "/home/user/csse4011/Vidar-Blue/ESP_GPIO_TEST/blinky/build/zephyr/soc/riscv/esp32c3/EspPartitionTable-prefix/src/EspPartitionTable-stamp/EspPartitionTable-update.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"EspPartitionTable"
+		],
+		"name" : "EspPartitionTable"
+	}
+}

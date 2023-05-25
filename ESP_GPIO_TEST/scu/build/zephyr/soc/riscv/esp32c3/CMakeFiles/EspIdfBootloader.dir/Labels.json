@@ -1,0 +1,43 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "/home/user/csse4011/Vidar-Blue/ESP_GPIO_TEST/scu/build/zephyr/soc/riscv/esp32c3/CMakeFiles/EspIdfBootloader"
+		},
+		{
+			"file" : "/home/user/csse4011/Vidar-Blue/ESP_GPIO_TEST/scu/build/zephyr/soc/riscv/esp32c3/CMakeFiles/EspIdfBootloader.rule"
+		},
+		{
+			"file" : "/home/user/csse4011/Vidar-Blue/ESP_GPIO_TEST/scu/build/zephyr/soc/riscv/esp32c3/CMakeFiles/EspIdfBootloader-complete.rule"
+		},
+		{
+			"file" : "/home/user/csse4011/Vidar-Blue/ESP_GPIO_TEST/scu/build/esp-idf/src/EspIdfBootloader-stamp/EspIdfBootloader-build.rule"
+		},
+		{
+			"file" : "/home/user/csse4011/Vidar-Blue/ESP_GPIO_TEST/scu/build/esp-idf/src/EspIdfBootloader-stamp/EspIdfBootloader-configure.rule"
+		},
+		{
+			"file" : "/home/user/csse4011/Vidar-Blue/ESP_GPIO_TEST/scu/build/esp-idf/src/EspIdfBootloader-stamp/EspIdfBootloader-download.rule"
+		},
+		{
+			"file" : "/home/user/csse4011/Vidar-Blue/ESP_GPIO_TEST/scu/build/esp-idf/src/EspIdfBootloader-stamp/EspIdfBootloader-install.rule"
+		},
+		{
+			"file" : "/home/user/csse4011/Vidar-Blue/ESP_GPIO_TEST/scu/build/esp-idf/src/EspIdfBootloader-stamp/EspIdfBootloader-mkdir.rule"
+		},
+		{
+			"file" : "/home/user/csse4011/Vidar-Blue/ESP_GPIO_TEST/scu/build/esp-idf/src/EspIdfBootloader-stamp/EspIdfBootloader-patch.rule"
+		},
+		{
+			"file" : "/home/user/csse4011/Vidar-Blue/ESP_GPIO_TEST/scu/build/esp-idf/src/EspIdfBootloader-stamp/EspIdfBootloader-update.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"EspIdfBootloader"
+		],
+		"name" : "EspIdfBootloader"
+	}
+}

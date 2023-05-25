@@ -1,0 +1,13 @@
+# Target labels
+ EspPartitionTable
+# Source files and their labels
+/home/user/csse4011/Vidar-Blue/ESP_GPIO_TEST/blinky/build/zephyr/soc/riscv/esp32c3/CMakeFiles/EspPartitionTable
+/home/user/csse4011/Vidar-Blue/ESP_GPIO_TEST/blinky/build/zephyr/soc/riscv/esp32c3/CMakeFiles/EspPartitionTable.rule
+/home/user/csse4011/Vidar-Blue/ESP_GPIO_TEST/blinky/build/zephyr/soc/riscv/esp32c3/CMakeFiles/EspPartitionTable-complete.rule
+/home/user/csse4011/Vidar-Blue/ESP_GPIO_TEST/blinky/build/zephyr/soc/riscv/esp32c3/EspPartitionTable-prefix/src/EspPartitionTable-stamp/EspPartitionTable-build.rule
+/home/user/csse4011/Vidar-Blue/ESP_GPIO_TEST/blinky/build/zephyr/soc/riscv/esp32c3/EspPartitionTable-prefix/src/EspPartitionTable-stamp/EspPartitionTable-configure.rule
+/home/user/csse4011/Vidar-Blue/ESP_GPIO_TEST/blinky/build/zephyr/soc/riscv/esp32c3/EspPartitionTable-prefix/src/EspPartitionTable-stamp/EspPartitionTable-download.rule
+/home/user/csse4011/Vidar-Blue/ESP_GPIO_TEST/blinky/build/zephyr/soc/riscv/esp32c3/EspPartitionTable-prefix/src/EspPartitionTable-stamp/EspPartitionTable-install.rule
+/home/user/csse4011/Vidar-Blue/ESP_GPIO_TEST/blinky/build/zephyr/soc/riscv/esp32c3/EspPartitionTable-prefix/src/EspPartitionTable-stamp/EspPartitionTable-mkdir.rule
+/home/user/csse4011/Vidar-Blue/ESP_GPIO_TEST/blinky/build/zephyr/soc/riscv/esp32c3/EspPartitionTable-prefix/src/EspPartitionTable-stamp/EspPartitionTable-patch.rule
+/home/user/csse4011/Vidar-Blue/ESP_GPIO_TEST/blinky/build/zephyr/soc/riscv/esp32c3/EspPartitionTable-prefix/src/EspPartitionTable-stamp/EspPartitionTable-update.rule
