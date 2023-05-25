@@ -33,15 +33,12 @@ static struct bt_uuid_128 ultra_uuid = BT_UUID_INIT_128(
     0xd1, 0x92, 0x67, 0x35, 0x78, 0x16, 0x21, 0x91,
     0x26, 0x49, 0x60, 0xeb, 0x06, 0xa7, 0xca, 0xcb);
 
-static struct bt_uuid_128 gas_uuid = BT_UUID_INIT_128(
-    0xd2, 0x92, 0x67, 0x35, 0x78, 0x16, 0x21, 0x91,
-    0x26, 0x49, 0x60, 0xeb, 0x06, 0xa7, 0xca, 0xcb);
-
 uint32_t timeStamp = 0;
 //ULTRA READ BUFFER
-uint8_t hts_buf[5] = {0xAA, 0x04, 0x05, 0x04, 0x05};
-
-
+uint8_t hts_buf[5] = {0xAA, 0x00, 0x00, 0x00, 0x00};
+uint8_t variableA[5] = {0xAA, 0x00, 0x00, 0x00, 0x00};
+uint8_t new_data_recv[5] = {0xAA, 0x00, 0x00, 0x00, 0x00};
+int value_count = 0;
 /** 
 * Connection call back function
 */
@@ -227,9 +224,21 @@ uint8_t read_hts(struct bt_conn *conn, uint8_t err,
                                struct bt_gatt_read_params *params,
                                const void *data, uint16_t length) {
 
+    //memcpy(&variableA, hts_buf, sizeof(variableA));
+
     memcpy(&hts_buf, data, sizeof(hts_buf));
-    
-    printk("sensor : %u %d %d %u %u \r\n", hts_buf[0], hts_buf[1], hts_buf[2], hts_buf[3], hts_buf[4]);
+
+    /**if (value_count == 9) {
+        printk("10 : %u,%d,%d,%u,%u\r\n", hts_buf[0], hts_buf[1], hts_buf[2], hts_buf[3], hts_buf[4]);
+        value_count = 0;
+        return 0;
+    } else if (value_count < 9) {
+        for (int i = 1; i < 5; i++) {
+            hts_buf[i] += new_data_recv[i]/10;
+        }
+        value_count++;
+    }**/
+	printk("%u,%d,%d,%u,%u\r\n", hts_buf[0], hts_buf[1], hts_buf[2], hts_buf[3], hts_buf[4]);
     return 0;
 }
 
@@ -258,7 +267,7 @@ void thread_ble_read_out(void) {
 
         }
 
-        k_usleep(100);
+        k_usleep(1000);
     }
 }
 
